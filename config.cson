@@ -1,0 +1,33 @@
+"*":
+  "autocomplete-plus": {}
+  core:
+    disabledPackages: [
+      "welcome"
+      "timecop"
+      "release-notes"
+      "language-toml"
+      "language-mustache"
+      "language-make"
+      "language-less"
+      "language-go"
+      "language-csharp"
+      "language-clojure"
+      "language-c"
+      "about"
+      "background-tips"
+    ]
+  editor:
+    invisibles: {}
+    scrollPastEnd: true
+    softWrap: true
+    softWrapHangingIndent: 2
+    tabType: "soft"
+  "exception-reporting":
+    userId: "63600cb2-3bd3-6a28-9da5-f81ae28a578d"
+  linter:
+    showErrorPanel: false
+  "linter-rubocop": {}
+  "merge-conflicts": {}
+  "rails-rspec": {}
+  welcome:
+    showOnStartup: false
