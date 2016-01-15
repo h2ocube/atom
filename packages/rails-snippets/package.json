@@ -1,6 +1,6 @@
 {
   "name": "rails-snippets",
-  "version": "2.1.0",
+  "version": "2.2.1",
   "main": "./lib/rails-snippets",
   "activationCommands": {
     "atom-text-editor": [
@@ -36,10 +36,10 @@
     "url": "https://github.com/joseramonc/rails-snippets/issues"
   },
   "homepage": "https://github.com/joseramonc/rails-snippets#readme",
-  "_id": "rails-snippets@2.1.0",
-  "_shasum": "cd511616d81924f6855578412e6572e51d072a6a",
-  "_resolved": "file:../d-1151128-913-1nadpiz/package.tgz",
-  "_from": "../d-1151128-913-1nadpiz/package.tgz",
+  "_id": "rails-snippets@2.2.1",
+  "_shasum": "bcb4da33e1ff17bc0edd1a46b7d2b6a15b43c752",
+  "_resolved": "file:../d-116010-870-upvabw/package.tgz",
+  "_from": "../d-116010-870-upvabw/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [

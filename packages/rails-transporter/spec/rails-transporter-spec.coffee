@@ -46,9 +46,55 @@ describe "RailsTransporter", ->
           for migration in fs.readdirSync(migrationDir)
             expect($(workspaceElement).find(".select-list .primary-line:contains(#{migration})")).toExist()
             expect($(workspaceElement).find(".select-list .secondary-line:contains(#{atom.project.relativize(path.join(migrationDir, migration))})")).toExist()
+          
+          # expect(workspaceElement.querySelector(".select-list li")).toHaveClass 'two-lines selected'
   
-          expect(workspaceElement.querySelector(".select-list li")).toHaveClass 'two-lines selected'
-  
+  describe "open-view behavior", ->
+    describe "when active editor opens controller", ->
+      describe "open file", ->
+        beforeEach ->
+          waitsForPromise ->
+            atom.workspace.open(path.join(atom.project.getPaths()[0], 'app', 'controllers', 'blogs_controller.rb'))
+      
+        it "opens related view", ->
+          editor = atom.workspace.getActiveTextEditor()
+          editor.setCursorBufferPosition new Point(9, 0)
+          atom.commands.dispatch workspaceElement, 'rails-transporter:open-view'
+      
+          # Waits until package is activated and active panes count is 2
+          waitsFor ->
+            activationPromise
+            atom.workspace.getActivePane().getItems().length == 2
+      
+          runs ->
+            viewPath = path.join(atom.project.getPaths()[0], 'app', 'views', 'blogs', 'index.html.erb')
+            editor = atom.workspace.getActiveTextEditor()
+            expect(editor.getPath()).toBe viewPath
+            expect(editor.getLastCursor().getCurrentBufferLine()).toMatch /^<h1>Listing blogs<\/h1>$/
+            
+      describe "open file for fallbacks", ->
+        beforeEach ->
+          waitsForPromise ->
+            atom.config.set('rails-transporter.viewFileExtension', ['json.jbuilder'])
+            atom.workspace.open(path.join(atom.project.getPaths()[0], 'app', 'controllers', 'api', 'blogs_controller.rb'))
+      
+        it "opens related view", ->
+          editor = atom.workspace.getActiveTextEditor()
+          editor.setCursorBufferPosition new Point(4, 0)
+          atom.commands.dispatch workspaceElement, 'rails-transporter:open-view'
+      
+          # Waits until package is activated and active panes count is 2
+          waitsFor ->
+            activationPromise
+            atom.workspace.getActivePane().getItems().length == 2
+      
+          runs ->
+            viewPath = path.join(atom.project.getPaths()[0], 'app', 'views', 'api', 'blogs', 'index.json.jbuilder')
+            editor = atom.workspace.getActiveTextEditor()
+            expect(editor.getPath()).toBe viewPath
+            expect(editor.getLastCursor().getCurrentBufferLine()).toMatch /^json.array!(@blogs) do |blog|$/
+
+
   describe "open-view-finder behavior", ->
   
     describe "when active editor opens controller", ->
@@ -211,6 +257,27 @@ describe "RailsTransporter", ->
           editor.setCursorBufferPosition new Point(0, 0)
           expect(editor.getPath()).toBe modelPath
           expect(editor.getLastCursor().getCurrentBufferLine()).toMatch /^class Blog < ActiveRecord::Base$/
+            
+    describe "when active editor opens namespaced controller", ->
+      beforeEach ->
+        waitsForPromise ->
+          atom.workspace.open(path.join(atom.project.getPaths()[0], 'app', 'controllers', 'admins', 'blogs_controller.rb'))
+    
+      it "opens related model", ->
+        atom.commands.dispatch workspaceElement, 'rails-transporter:open-model'
+    
+        # Waits until package is activated and active panes count is 2
+        waitsFor ->
+          activationPromise
+          atom.workspace.getActivePane().getItems().length == 2
+    
+        runs ->
+          modelPath = path.join(atom.project.getPaths()[0], 'app', 'models', 'blog.rb')
+          editor = atom.workspace.getActiveTextEditor()
+          editor.setCursorBufferPosition new Point(0, 0)
+          expect(editor.getPath()).toBe modelPath
+          expect(editor.getLastCursor().getCurrentBufferLine()).toMatch /^class Blog < ActiveRecord::Base$/
+
             
    describe "when active editor opens model test", ->
      beforeEach ->
@@ -1482,42 +1549,84 @@ describe "RailsTransporter", ->
 
   describe "open-factory behavior", ->
     describe "when active editor opens model", ->
-      beforeEach ->
-        waitsForPromise ->
-          atom.workspace.open(path.join(atom.project.getPaths()[0], 'app', 'models', 'blog.rb'))
-    
-      it "opens related factory", ->
-        atom.commands.dispatch workspaceElement, 'rails-transporter:open-factory'
-    
-        # Waits until package is activated and active panes count is 2
-        waitsFor ->
-          activationPromise
-          atom.workspace.getActivePane().getItems().length == 2
-    
-        runs ->
-          factoryPath = path.join(atom.project.getPaths()[0], 'spec', 'factories', 'blogs.rb')
-          editor = atom.workspace.getActiveTextEditor()
-          editor.setCursorBufferPosition new Point(3, 0)
-          expect(editor.getPath()).toBe factoryPath
-          expect(editor.getLastCursor().getCurrentBufferLine()).toMatch /^  factory :blog, :class => 'Blog' do$/
+      describe "open plural resource filename", ->
+        beforeEach ->
+          waitsForPromise ->
+            atom.workspace.open(path.join(atom.project.getPaths()[0], 'app', 'models', 'blog.rb'))
+      
+        it "opens related factory", ->
+          atom.commands.dispatch workspaceElement, 'rails-transporter:open-factory'
+      
+          # Waits until package is activated and active panes count is 2
+          waitsFor ->
+            activationPromise
+            atom.workspace.getActivePane().getItems().length == 2
+      
+          runs ->
+            factoryPath = path.join(atom.project.getPaths()[0], 'spec', 'factories', 'blogs.rb')
+            editor = atom.workspace.getActiveTextEditor()
+            editor.setCursorBufferPosition new Point(3, 0)
+            expect(editor.getPath()).toBe factoryPath
+            expect(editor.getLastCursor().getCurrentBufferLine()).toMatch /^  factory :blog, :class => 'Blog' do$/
+          
+      describe "open singular resource filename", ->
+        beforeEach ->
+          waitsForPromise ->
+            atom.workspace.open(path.join(atom.project.getPaths()[0], 'app', 'models', 'entry.rb'))
+      
+        it "opens related factory", ->
+          atom.commands.dispatch workspaceElement, 'rails-transporter:open-factory'
+      
+          # Waits until package is activated and active panes count is 2
+          waitsFor ->
+            activationPromise
+            atom.workspace.getActivePane().getItems().length == 2
+      
+          runs ->
+            factoryPath = path.join(atom.project.getPaths()[0], 'spec', 'factories', 'entry.rb')
+            editor = atom.workspace.getActiveTextEditor()
+            editor.setCursorBufferPosition new Point(3, 0)
+            expect(editor.getPath()).toBe factoryPath
+            expect(editor.getLastCursor().getCurrentBufferLine()).toMatch /^  factory :entry, :class => 'Entry' do$/
+
   
     describe "when active editor opens model-spec", ->
-      beforeEach ->
-        waitsForPromise ->
-          atom.workspace.open(path.join(atom.project.getPaths()[0], 'spec', 'models', 'blog_spec.rb'))
+      describe "open plural resource filename", ->
+        beforeEach ->
+          waitsForPromise ->
+            atom.workspace.open(path.join(atom.project.getPaths()[0], 'spec', 'models', 'blog_spec.rb'))
+      
+        it "opens related factory", ->
+          atom.commands.dispatch workspaceElement, 'rails-transporter:open-factory'
+      
+          # Waits until package is activated and active panes count is 2
+          waitsFor ->
+            activationPromise
+            atom.workspace.getActivePane().getItems().length == 2
+      
+          runs ->
+            factoryPath = path.join(atom.project.getPaths()[0], 'spec', 'factories', 'blogs.rb')
+            editor = atom.workspace.getActiveTextEditor()
+            editor.setCursorBufferPosition new Point(3, 0)
+            expect(editor.getPath()).toBe factoryPath
+            expect(editor.getLastCursor().getCurrentBufferLine()).toMatch /^  factory :blog, :class => 'Blog' do$/
     
-      it "opens related factory", ->
-        atom.commands.dispatch workspaceElement, 'rails-transporter:open-factory'
-    
-        # Waits until package is activated and active panes count is 2
-        waitsFor ->
-          activationPromise
-          atom.workspace.getActivePane().getItems().length == 2
-    
-        runs ->
-          factoryPath = path.join(atom.project.getPaths()[0], 'spec', 'factories', 'blogs.rb')
-          editor = atom.workspace.getActiveTextEditor()
-          editor.setCursorBufferPosition new Point(3, 0)
-          expect(editor.getPath()).toBe factoryPath
-          expect(editor.getLastCursor().getCurrentBufferLine()).toMatch /^  factory :blog, :class => 'Blog' do$/
-  
+      describe "open singular resource filename", ->
+        beforeEach ->
+          waitsForPromise ->
+            atom.workspace.open(path.join(atom.project.getPaths()[0], 'spec', 'models', 'entry_spec.rb'))
+      
+        it "opens related factory", ->
+          atom.commands.dispatch workspaceElement, 'rails-transporter:open-factory'
+      
+          # Waits until package is activated and active panes count is 2
+          waitsFor ->
+            activationPromise
+            atom.workspace.getActivePane().getItems().length == 2
+      
+          runs ->
+            factoryPath = path.join(atom.project.getPaths()[0], 'spec', 'factories', 'entry.rb')
+            editor = atom.workspace.getActiveTextEditor()
+            editor.setCursorBufferPosition new Point(3, 0)
+            expect(editor.getPath()).toBe factoryPath
+            expect(editor.getLastCursor().getCurrentBufferLine()).toMatch /^  factory :entry, :class => 'Entry' do$/

@@ -1,3 +1,23 @@
+## 1.6.1 Bugfixes
+* `open-migration-finder` return files order by name desc
+* Fix bug https://github.com/hmatsuda/rails-transporter/issues/84
+
+## 1.6.0 viewFileExtension fallback
+* Support viewFileExtensionFallback option
+
+## 1.5.0 Change UI for to open file dialog
+* Show modal panel instead of system dialog
+* Fix bug https://github.com/hmatsuda/rails-transporter/issues/78
+
+## 1.4.5
+* Support `open-model` to open non-namespaced model from view file
+
+## 1.4.4
+* Support `open-model` to open non-namespaced model from controller file
+
+## 1.3.1 - Bugfixes
+* Fix bug https://github.com/hmatsuda/rails-transporter/issues/80 
+
 ## 1.3.0 - Support to open minitest files
 * Support `open-test` command to open minitest
 * Support `open-spec` command to open request spec from controller 

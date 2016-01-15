@@ -1,4 +1,4 @@
-# Rails Transporter [![Build Status](https://travis-ci.org/hmatsuda/rails-transporter.svg?branch=master)](https://travis-ci.org/hmatsuda/rails-transporter) [![Build status](https://ci.appveyor.com/api/projects/status/jnr0p97ero2wh1j2/branch/master?svg=true)](https://ci.appveyor.com/project/hmatsuda/rails-transporter/branch/master)
+# Rails Transporter [![Build Status](https://travis-ci.org/hmatsuda/rails-transporter.svg?branch=master)](https://travis-ci.org/hmatsuda/rails-transporter) 
 
 This package provides commands to open file depending on file which is being opened by active editor.
 
@@ -192,10 +192,12 @@ it opens javascript file if it exists.
 //= require_directory shared
 ```
 it opens related asset file list
+
 ![](http://cl.ly/image/1G2D240f1A0i/application01_js_-__Users_hakutoitoi__ghq_github_com_hmatsuda_rails-transporter_spec_fixtures_-_Atom.png)
 
 ### open-mingration-finder
 It opens all of migration list.
+
 ![](http://cl.ly/image/3y0F2D1H1w2F/application01_js_-__Users_hakutoitoi__ghq_github_com_hmatsuda_rails-transporter_spec_fixtures_-_Atom.png)
 
 ### open-factory
@@ -218,6 +220,7 @@ open-view|`ctrl-r v`
 open-layout|`ctrl-r l`
 open-model|`ctrl-r m`
 open-helper|`ctrl-r h`
+open-test|`ctrl-r t`
 open-spec|`ctrl-r s`
 open-partial-template|`ctrl-r p`
 open-asset|`ctrl-r a`
@@ -228,8 +231,19 @@ open-factory|`ctrl-r f`
 
 You can change these from the Settings menu.
 
-- `newFileExtention`: Extension of the view files. Use this to support [Haml](http://haml.info/), [Slim](http://slim-lang.com/), etc.
-- `controllerSpecType`: type of controller spec files. Use this to support [controller spec](https://www.relishapp.com/rspec/rspec-rails/v/3-2/docs/controller-specs), [request spec](https://www.relishapp.com/rspec/rspec-rails/v/3-2/docs/request-specs/request-spec) or [feature spec](https://www.relishapp.com/rspec/rspec-rails/v/3-2/docs/feature-specs).
+### `viewFileExtension`
+Extension of the view files.
+
+if it's value is `html.erb, html.haml, json.jbuilder`, `open-view` attempts to open following:
+
+```
+1. html.erb
+2. html.haml
+3. json.jbuilder
+```
+ 
+### `controllerSpecType`
+type of controller spec files. Use this to support [controller spec](https://www.relishapp.com/rspec/rspec-rails/v/3-2/docs/controller-specs), [request spec](https://www.relishapp.com/rspec/rspec-rails/v/3-2/docs/request-specs/request-spec) or [feature spec](https://www.relishapp.com/rspec/rspec-rails/v/3-2/docs/feature-specs).
 
 ## Requirement
 * Ruby 1.9.3+
@@ -238,10 +252,3 @@ You can change these from the Settings menu.
 ## Contributors
 * joseramonc
 * chibicode
-
-## Contributing
-1. Fork it
-2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Add some feature')
-4. Push to the branch (git push origin my-new-feature)
-5. Create new Pull Request
