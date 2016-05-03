@@ -24,10 +24,11 @@
     tabType: "soft"
   "exception-reporting":
     userId: "63600cb2-3bd3-6a28-9da5-f81ae28a578d"
-  linter:
-    showErrorPanel: false
+  linter: {}
   "linter-rubocop": {}
   "merge-conflicts": {}
   "rails-rspec": {}
+  rspec:
+    command: "bundle exec rspec"
   welcome:
     showOnStartup: false

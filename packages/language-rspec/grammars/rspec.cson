@@ -9,7 +9,7 @@
   }
   {
     'match': '(?<!\\.)\\b(it|specify|example|scenario|pending|skip|xit|xspecify|xexample)\\b'
-    'name': 'keyword.other.exxample.rspec'
+    'name': 'keyword.other.example.rspec'
   }
   {
     'match': '(?<!\\.)\\b(before|after|around)\\b(?![?!])'
@@ -21,9 +21,11 @@
 ]
 'repository':
   'behaviour':
-    'begin': '^\\s*(describe|context|feature)\\b'
+    'begin': '^(RSpec)?(?:\\.|\\s*)(describe|context|feature)\\b'
     'beginCaptures':
       '1':
+        'name': 'support.class.ruby'
+      '2':
         'name': 'keyword.other.rspec.behaviour'
     'end': '\\b(do)\\s*$'
     'endCaptures':
@@ -32,9 +34,34 @@
     'name': 'meta.rspec.behaviour'
     'patterns': [
       {
-        'begin': '\\s([\'\"])'
-        'end': '\\1'
-        'name': 'string'
+        'begin': '"'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.ruby'
+        'end': '"'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.ruby'
+        'name': 'string.quoted.double.interpolated.ruby'
+      }
+      {
+        'begin': "'"
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.ruby'
+        'end': "'"
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.ruby'
+        'name': 'string.quoted.single.ruby'
+      }
+      {
+        'captures':
+          '1':
+            'name': 'punctuation.definition.constant.ruby'
+        'comment': 'symbols'
+        'match': '(?<!:)(:)(?>[$a-zA-Z_]\\w*(?>[?!]|=(?![>=]))?|===?|<=>|>[>=]?|<[<=]?|[%&`/\\|]|\\*\\*?|=?~|[-+]@?|\\[\\]=?|@@?[a-zA-Z_]\\w*)'
+        'name': 'constant.other.symbol.ruby'
       }
       {
         'begin': '(,)'
