@@ -24,7 +24,8 @@
     tabType: "soft"
   "exception-reporting":
     userId: "63600cb2-3bd3-6a28-9da5-f81ae28a578d"
-  linter: {}
+  linter:
+    showErrorPanel: false
   "linter-rubocop": {}
   "merge-conflicts": {}
   "rails-rspec": {}

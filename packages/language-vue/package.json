@@ -1,6 +1,6 @@
 {
   "name": "language-vue",
-  "version": "0.11.0",
+  "version": "0.13.0",
   "description": "Syntax highlighting for vue component files",
   "repository": {
     "type": "git",
@@ -17,10 +17,10 @@
     "url": "https://github.com/hedefalk/atom-vue/issues"
   },
   "homepage": "https://github.com/hedefalk/atom-vue#readme",
-  "_id": "language-vue@0.11.0",
-  "_shasum": "0dc337923bad424404f9b3a8bd04c7bb4206b716",
-  "_resolved": "file:../d-11643-1647-vyclin/package.tgz",
-  "_from": "../d-11643-1647-vyclin/package.tgz",
+  "_id": "language-vue@0.13.0",
+  "_shasum": "da2660e36d7269ae809fcf204064d38add3bbb31",
+  "_resolved": "file:../d-116430-9338-6bh05n/package.tgz",
+  "_from": "../d-116430-9338-6bh05n/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [],

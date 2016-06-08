@@ -1,7 +1,7 @@
 {
   "name": "git-plus",
   "main": "./lib/git-plus",
-  "version": "5.13.4",
+  "version": "5.14.0",
   "description": "Do git things without the terminal",
   "keywords": [
     "git"
@@ -42,6 +42,7 @@
       "git-plus:stage-files",
       "git-plus:stage-hunk",
       "git-plus:stash-save",
+      "git-plus:stash-save-message",
       "git-plus:stash-pop",
       "git-plus:stash-keep",
       "git-plus:stash-drop",
@@ -83,10 +84,10 @@
     "url": "https://github.com/akonwi/git-plus/issues"
   },
   "homepage": "https://github.com/akonwi/git-plus#readme",
-  "_id": "git-plus@5.13.4",
-  "_shasum": "8f2646818368e125415df3a7d3f1635c8d27ea78",
-  "_resolved": "file:../d-116312-28072-1pijcfb/package.tgz",
-  "_from": "../d-116312-28072-1pijcfb/package.tgz",
+  "_id": "git-plus@5.14.0",
+  "_shasum": "f0c54a7dceb17a81e1ad58885cc1fe52de285801",
+  "_resolved": "file:../d-116430-9337-1qb5jca/package.tgz",
+  "_from": "../d-116430-9337-1qb5jca/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -187,7 +188,7 @@
       },
       {
         "name": "fs-plus",
-        "version": "2.8.2",
+        "version": "2.9.1",
         "path": "node_modules/fs-plus/lib/fs-plus.js"
       },
       {
@@ -254,6 +255,7 @@
         "lib/models/git-stash-apply.coffee",
         "lib/models/git-stash-drop.coffee",
         "lib/models/git-stash-pop.coffee",
+        "lib/models/git-stash-save-message.coffee",
         "lib/models/git-stash-save.coffee",
         "lib/models/git-status.coffee",
         "lib/models/git-tags.coffee",
@@ -280,6 +282,7 @@
         "lib/views/select-stage-hunk-file-view.coffee",
         "lib/views/select-stage-hunks-view.coffee",
         "lib/views/select-unstage-files-view.coffee",
+        "lib/views/stash-message-view.coffee",
         "lib/views/status-list-view.coffee",
         "lib/views/status-view.coffee",
         "lib/views/tag-create-view.coffee",

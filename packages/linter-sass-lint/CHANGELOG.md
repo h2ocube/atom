@@ -1,3 +1,12 @@
+## 1.5.0
+- Allows the inclusion of files with extra extensions such as 'file.scss.liquid'
+- Updated to Atom linter ^5.0.1
+- Includes eslint updates for development
+
+## 1.4.3
+- Force latest version of sass-lint 1.7.0
+- Update a few dependencies
+
 ## 1.4.2
 - Include latest version of sass-lint
 - Fix dependency issue with eslint-config-airbnb-base
