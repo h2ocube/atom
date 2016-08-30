@@ -18,63 +18,59 @@
 
   'options_from_collection_for_select':
     'prefix': 'ofcfs'
+    'description': 'options_from_collection_for_select(collection, value_method, text_method, selected = nil)'
+    'descriptionMoreUrl': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormOptionsHelper.html#method-i-options_from_collection_for_select'
     'body': 'options_from_collection_for_select(@${1:products}, :${2:id}, :${3:name}, ${4:f.object.${5:product_id}})$0'
+
+  'options_for_select':
+    'prefix': 'ofs'
+    'description': 'options_for_select(container, selected = nil)'
+    'descriptionMoreUrl': 'http://api.rubyonrails.org/classes/ActionView/Helpers/FormOptionsHelper.html#method-i-options_for_select'
+    'body': 'options_for_select'
 
   'link_to':
     'prefix': 'lt'
-    'body': '<%= link_to "${1:text}", ${2:path}, ${4:class: "${3:btn btn-primary}"} %>$0'
+    'description': 'link_to(name = nil, options = nil, html_options = nil, &block)'
+    'descriptionMoreUrl': 'http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to'
+    'body': '<%= link_to "${1:text}", ${2:"#"}, ${4:class: "${3:btn btn-primary}"} %>$0'
 
   'link_to_method':
     'prefix': 'ltm'
-    'body': '<%= link_to "${1:text}", ${2:path}, method: :${3:post} %>'
+    'description': 'link_to ..., method: :method'
+    'body': '<%= link_to "${1:text}", ${2:"#"}, method: :${3:post} %>'
+
+  'link_to_tooltip':
+    'prefix': 'ltt'
+    'description': 'link_to ..., data: { toggle: :tooltip, title: "." }'
+    'body': '<%= link_to "${1:text}", ${2:"#"}, data: { toggle: :tooltip, title: "$3" } %>'
 
   'link_to_block':
     'prefix': 'ltblock'
+    'description': 'link_to(name = nil, options = nil, html_options = nil, &block)'
     'body': """
-      <%= link_to ${1:path}, class: "${2:btn btn-primary}" do %>
+      <%= link_to ${1:"#"}, class: "${2:btn btn-primary}" do %>
         ${3:<%= ${4:fa_icon('${5:search}')} %>}$6
       <% end %>
     """
 
   'button_to':
     'prefix': 'bt'
+    'description': 'button_to(name = nil, options = nil, html_options = nil, &block)'
+    'descriptionMoreUrl': 'http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-button_to'
     'body': '<%= button_to "${1:text}", ${2:path}, class: "${3:btn btn-primary}" %>$0'
-
-  'button_to_method':
-    'prefix': 'btm'
-    'body': '<%= button_to "${1:text}", ${2:path}, class: "${3:btn btn-primary}", method: :${4:post} %>$0'
-
-  'button_to_block':
-    'prefix': 'btblock'
-    'body': """
-      <%= link_to ${1:path}, class: "${2:btn btn-primary}" do %>
-        ${3:<%= ${4:fa_icon('${5:search}')} %>}$6
-      <% end %>
-    """
-
-  'button_tag':
-    'prefix': 'btag'
-    'body': """
-      <%= button_tag class: '${2:btn btn-${3:primary}}' do %>
-        <%= ${4:fa_icon('${5:search}'${6:, text: '${7:Buscar}'})} %>
-      <% end %>
-    """
 
   'image_tag':
     'prefix': 'image'
     'body': '<%= image_tag $1 %>'
 
-  'image_tag_class':
-    'prefix': 'imagec'
-    'body': '<%= image_tag $1, class: "${2:img-responsive}" %>'
-
   'render (partial)':
     'prefix': 'rp'
+    'description': "<%= render 'partial' %>"
     'body': '<%= render "${1:partial}" %>'
 
   'render (partial, object)':
-    'prefix': 'rp'
-    'body': '<%= render "${1:shared/errors}", ${2:object}: @${2:object} %>'
+    'prefix': 'rpo'
+    'body': '<%= render "${1:shared/errors}", ${2:object}: ${3:@${2:object}}, $0 %>'
 
   'render (partial, locals)':
     'prefix': 'rpl'
@@ -118,6 +114,7 @@
 
   '.each with index':
     'prefix': '.ewi'
+    'description': 'each with index'
     'body': """
       .each_with_index do |$1, index| %>
         <%= $2 %>
@@ -126,6 +123,7 @@
 
   'if statement':
     'prefix': 'if'
+    'description': 'if statement'
     'body': """
       <% if ${1:true} %>
         ${2:<!-- true -->}
@@ -134,6 +132,7 @@
 
   'if else statement':
     'prefix': 'ife'
+    'descrition': 'if else multiline statement'
     'body': """
       <% if ${1:true} %>
         ${2:<!-- true -->}
@@ -144,6 +143,7 @@
 
   'else':
     'prefix': 'else'
+    'description': '<% else %>'
     'body': '<% else %>'
 
   'elsif':
@@ -154,21 +154,24 @@
     'prefix': 'cache'
     'body': """
       <% cache ["${1:key}", ${2:object}] do %>
-        $3
+        $0
       <% end %>
     """
 
   'end':
     'prefix': 'end'
+    'description': '<% end %>'
     'body': '<% end %>'
 
-  'fa ("icon", text: "text")':
+  'fa_icon("icon", text: "text")':
     'prefix': 'fa'
-    'body': '<%= fa_icon("${1:search}"${2:, text: "${3:Buscar}"}) %>'
+    'description': 'fa_icon(names = "flag", options = {})'
+    'body': '<%= fa_icon("${1:search}"${2:, text: "${3:Buscar}"}) %>$0'
 
   'current_user':
     'prefix': 'cur'
-    'body': '<%= current_user %>'
+    'description': 'current_user provided usually by devise'
+    'body': '<%= current_user$0 %>'
 
   'link_to fa_icon("icon", text: "text"), url':
     'prefix': 'ltf'

@@ -1,0 +1,1469 @@
+{
+  "name": "riot",
+  "main": "./lib/riot.es6",
+  "version": "0.4.1",
+  "description": "Riot.js grammar, and auto compile.",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jumilla/atom-riot.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "riot": "^2.3.0"
+  },
+  "readme": "# Atom riot package\n\n- Support Riot grammar (.tag / .riot.tag / .riot.html)\n- Generate .js on file save\n\n## for Windows\n\nPlease set the npm global package path for riot to env `RIOT_PATH` if used `<script type=\"xxx\"></script>`.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/jumilla/atom-riot/issues"
+  },
+  "homepage": "https://github.com/jumilla/atom-riot#readme",
+  "_id": "riot@0.4.1",
+  "_shasum": "2f7f29337af504bf37789bfaadba0802bb7214ad",
+  "_resolved": "file:../d-116729-1340-r8d0jc/package.tgz",
+  "_from": "../d-116729-1340-r8d0jc/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "riot",
+        "version": "2.6.1",
+        "path": "node_modules/riot/lib/server/index.js"
+      },
+      {
+        "name": "riot-cli",
+        "version": "2.6.1",
+        "path": "node_modules/riot/node_modules/riot-cli/lib/index.js"
+      },
+      {
+        "name": "chalk",
+        "version": "1.1.3",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chalk/index.js"
+      },
+      {
+        "name": "ansi-styles",
+        "version": "2.2.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/ansi-styles/index.js"
+      },
+      {
+        "name": "escape-string-regexp",
+        "version": "1.0.5",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/escape-string-regexp/index.js"
+      },
+      {
+        "name": "has-ansi",
+        "version": "2.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/has-ansi/index.js"
+      },
+      {
+        "name": "ansi-regex",
+        "version": "2.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/index.js"
+      },
+      {
+        "name": "strip-ansi",
+        "version": "3.0.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/strip-ansi/index.js"
+      },
+      {
+        "name": "ansi-regex",
+        "version": "2.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/index.js"
+      },
+      {
+        "name": "supports-color",
+        "version": "2.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/supports-color/index.js"
+      },
+      {
+        "name": "chokidar",
+        "version": "1.6.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/index.js"
+      },
+      {
+        "name": "anymatch",
+        "version": "1.3.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/index.js"
+      },
+      {
+        "name": "arrify",
+        "version": "1.0.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/arrify/index.js"
+      },
+      {
+        "name": "micromatch",
+        "version": "2.3.11",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/index.js"
+      },
+      {
+        "name": "arr-diff",
+        "version": "2.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/arr-diff/index.js"
+      },
+      {
+        "name": "arr-flatten",
+        "version": "1.0.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/arr-diff/node_modules/arr-flatten/index.js"
+      },
+      {
+        "name": "array-unique",
+        "version": "0.2.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/array-unique/index.js"
+      },
+      {
+        "name": "braces",
+        "version": "1.8.5",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/index.js"
+      },
+      {
+        "name": "expand-range",
+        "version": "1.8.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/index.js"
+      },
+      {
+        "name": "fill-range",
+        "version": "2.2.3",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/index.js"
+      },
+      {
+        "name": "is-number",
+        "version": "2.1.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/is-number/index.js"
+      },
+      {
+        "name": "isobject",
+        "version": "2.1.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/isobject/index.js"
+      },
+      {
+        "name": "isarray",
+        "version": "1.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/isobject/node_modules/isarray/index.js"
+      },
+      {
+        "name": "randomatic",
+        "version": "1.1.5",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/randomatic/index.js"
+      },
+      {
+        "name": "repeat-string",
+        "version": "1.5.4",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/repeat-string/index.js"
+      },
+      {
+        "name": "preserve",
+        "version": "0.2.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/preserve/index.js"
+      },
+      {
+        "name": "repeat-element",
+        "version": "1.1.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/repeat-element/index.js"
+      },
+      {
+        "name": "expand-brackets",
+        "version": "0.1.5",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/expand-brackets/index.js"
+      },
+      {
+        "name": "is-posix-bracket",
+        "version": "0.1.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/expand-brackets/node_modules/is-posix-bracket/index.js"
+      },
+      {
+        "name": "extglob",
+        "version": "0.3.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/extglob/index.js"
+      },
+      {
+        "name": "filename-regex",
+        "version": "2.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/filename-regex/index.js"
+      },
+      {
+        "name": "is-extglob",
+        "version": "1.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/is-extglob/index.js"
+      },
+      {
+        "name": "kind-of",
+        "version": "3.0.4",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/kind-of/index.js"
+      },
+      {
+        "name": "is-buffer",
+        "version": "1.1.4",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/kind-of/node_modules/is-buffer/index.js"
+      },
+      {
+        "name": "normalize-path",
+        "version": "2.0.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/normalize-path/index.js"
+      },
+      {
+        "name": "object.omit",
+        "version": "2.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/index.js"
+      },
+      {
+        "name": "for-own",
+        "version": "0.1.4",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/node_modules/for-own/index.js"
+      },
+      {
+        "name": "for-in",
+        "version": "0.1.5",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/node_modules/for-own/node_modules/for-in/index.js"
+      },
+      {
+        "name": "is-extendable",
+        "version": "0.1.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/node_modules/is-extendable/index.js"
+      },
+      {
+        "name": "parse-glob",
+        "version": "3.0.4",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/parse-glob/index.js"
+      },
+      {
+        "name": "glob-base",
+        "version": "0.3.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/parse-glob/node_modules/glob-base/index.js"
+      },
+      {
+        "name": "is-dotfile",
+        "version": "1.0.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/parse-glob/node_modules/is-dotfile/index.js"
+      },
+      {
+        "name": "regex-cache",
+        "version": "0.4.3",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/regex-cache/index.js"
+      },
+      {
+        "name": "is-equal-shallow",
+        "version": "0.1.3",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/regex-cache/node_modules/is-equal-shallow/index.js"
+      },
+      {
+        "name": "is-primitive",
+        "version": "2.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/regex-cache/node_modules/is-primitive/index.js"
+      },
+      {
+        "name": "async-each",
+        "version": "1.0.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/async-each/index.js"
+      },
+      {
+        "name": "glob-parent",
+        "version": "2.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/glob-parent/index.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "is-binary-path",
+        "version": "1.0.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-binary-path/index.js"
+      },
+      {
+        "name": "binary-extensions",
+        "version": "1.5.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-binary-path/node_modules/binary-extensions/binary-extensions.json"
+      },
+      {
+        "name": "is-glob",
+        "version": "2.0.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-glob/index.js"
+      },
+      {
+        "name": "is-extglob",
+        "version": "1.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-glob/node_modules/is-extglob/index.js"
+      },
+      {
+        "name": "path-is-absolute",
+        "version": "1.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/path-is-absolute/index.js"
+      },
+      {
+        "name": "readdirp",
+        "version": "2.1.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/readdirp.js"
+      },
+      {
+        "name": "graceful-fs",
+        "version": "4.1.6",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/graceful-fs.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "3.0.3",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "brace-expansion",
+        "version": "1.1.6",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/brace-expansion/index.js"
+      },
+      {
+        "name": "balanced-match",
+        "version": "0.4.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js"
+      },
+      {
+        "name": "concat-map",
+        "version": "0.0.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js"
+      },
+      {
+        "name": "readable-stream",
+        "version": "2.1.5",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/readable.js"
+      },
+      {
+        "name": "buffer-shims",
+        "version": "1.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/buffer-shims/index.js"
+      },
+      {
+        "name": "core-util-is",
+        "version": "1.0.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/core-util-is/lib/util.js"
+      },
+      {
+        "name": "isarray",
+        "version": "1.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/isarray/index.js"
+      },
+      {
+        "name": "process-nextick-args",
+        "version": "1.0.7",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/process-nextick-args/index.js"
+      },
+      {
+        "name": "string_decoder",
+        "version": "0.10.31",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/string_decoder/index.js"
+      },
+      {
+        "name": "util-deprecate",
+        "version": "1.0.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/util-deprecate/node.js"
+      },
+      {
+        "name": "set-immediate-shim",
+        "version": "1.0.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/set-immediate-shim/index.js"
+      },
+      {
+        "name": "co",
+        "version": "4.6.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/co/index.js"
+      },
+      {
+        "name": "optionator",
+        "version": "0.8.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/optionator/lib/index.js"
+      },
+      {
+        "name": "deep-is",
+        "version": "0.1.3",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/deep-is/index.js"
+      },
+      {
+        "name": "fast-levenshtein",
+        "version": "1.1.4",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/fast-levenshtein/levenshtein.js"
+      },
+      {
+        "name": "levn",
+        "version": "0.3.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/levn/lib/index.js"
+      },
+      {
+        "name": "prelude-ls",
+        "version": "1.1.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/prelude-ls/lib/index.js"
+      },
+      {
+        "name": "type-check",
+        "version": "0.3.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/type-check/lib/index.js"
+      },
+      {
+        "name": "wordwrap",
+        "version": "1.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/wordwrap/index.js"
+      },
+      {
+        "name": "rollup",
+        "version": "0.32.4",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/rollup/dist/rollup.js"
+      },
+      {
+        "name": "source-map-support",
+        "version": "0.4.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/source-map-support.js"
+      },
+      {
+        "name": "source-map",
+        "version": "0.1.32",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/lib/source-map.js"
+      },
+      {
+        "name": "amdefine",
+        "version": "1.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/node_modules/amdefine/amdefine.js"
+      },
+      {
+        "name": "shelljs",
+        "version": "0.7.4",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/shell.js"
+      },
+      {
+        "name": "glob",
+        "version": "7.0.6",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/glob.js"
+      },
+      {
+        "name": "fs.realpath",
+        "version": "1.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/fs.realpath/index.js"
+      },
+      {
+        "name": "inflight",
+        "version": "1.0.5",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/inflight/inflight.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "3.0.3",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "brace-expansion",
+        "version": "1.1.6",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js"
+      },
+      {
+        "name": "balanced-match",
+        "version": "0.4.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js"
+      },
+      {
+        "name": "concat-map",
+        "version": "0.0.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js"
+      },
+      {
+        "name": "once",
+        "version": "1.3.3",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/once/once.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js"
+      },
+      {
+        "name": "path-is-absolute",
+        "version": "1.0.0",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/path-is-absolute/index.js"
+      },
+      {
+        "name": "interpret",
+        "version": "1.0.1",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/interpret/index.js"
+      },
+      {
+        "name": "rechoir",
+        "version": "0.6.2",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/index.js"
+      },
+      {
+        "name": "resolve",
+        "version": "1.1.7",
+        "path": "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/node_modules/resolve/index.js"
+      },
+      {
+        "name": "riot-compiler",
+        "version": "2.5.3",
+        "path": "node_modules/riot/node_modules/riot-compiler/lib/compiler.js"
+      },
+      {
+        "name": "riot-observable",
+        "version": "2.5.0",
+        "path": "node_modules/riot/node_modules/riot-observable/dist/observable.js"
+      },
+      {
+        "name": "riot-route",
+        "version": "2.5.0",
+        "path": "node_modules/riot/node_modules/riot-route/lib/index.js"
+      },
+      {
+        "name": "riot-tmpl",
+        "version": "2.4.1",
+        "path": "node_modules/riot/node_modules/riot-tmpl/dist/tmpl.js"
+      },
+      {
+        "name": "simple-dom",
+        "version": "0.3.0",
+        "path": "node_modules/riot/node_modules/simple-dom/dist/simple-dom.js"
+      },
+      {
+        "name": "simple-html-tokenizer",
+        "version": "0.2.5",
+        "path": "node_modules/riot/node_modules/simple-html-tokenizer/dist/simple-html-tokenizer.js"
+      }
+    ],
+    "extensions": {
+      ".js": [
+        "node_modules/riot/lib/browser/compiler/compile.js",
+        "node_modules/riot/lib/browser/global-variables.js",
+        "node_modules/riot/lib/browser/index.js",
+        "node_modules/riot/lib/browser/tag/each.js",
+        "node_modules/riot/lib/browser/tag/mkdom.js",
+        "node_modules/riot/lib/browser/tag/parse.js",
+        "node_modules/riot/lib/browser/tag/styleManager.js",
+        "node_modules/riot/lib/browser/tag/tag.js",
+        "node_modules/riot/lib/browser/tag/update.js",
+        "node_modules/riot/lib/browser/tag/util.js",
+        "node_modules/riot/lib/browser/wrap/prefix.js",
+        "node_modules/riot/lib/browser/wrap/suffix.js",
+        "node_modules/riot/lib/riot+compiler.js",
+        "node_modules/riot/lib/riot.csp.js",
+        "node_modules/riot/lib/riot.js",
+        "node_modules/riot/lib/server/index.js",
+        "node_modules/riot/lib/server/sdom.js",
+        "node_modules/riot/node_modules/riot-cli/lib/Task.js",
+        "node_modules/riot/node_modules/riot-cli/lib/analyzer/index.js",
+        "node_modules/riot/node_modules/riot-cli/lib/const.js",
+        "node_modules/riot/node_modules/riot-cli/lib/helpers.js",
+        "node_modules/riot/node_modules/riot-cli/lib/index.js",
+        "node_modules/riot/node_modules/riot-cli/lib/options.js",
+        "node_modules/riot/node_modules/riot-cli/lib/tasks/Check.js",
+        "node_modules/riot/node_modules/riot-cli/lib/tasks/Make.js",
+        "node_modules/riot/node_modules/riot-cli/lib/tasks/New.js",
+        "node_modules/riot/node_modules/riot-cli/lib/tasks/Watch.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/ansi-styles/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/escape-string-regexp/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/has-ansi/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/strip-ansi/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/supports-color/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/lib/fsevents-handler.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/lib/nodefs-handler.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/arrify/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/lib/chars.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/lib/expand.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/lib/glob.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/lib/utils.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/arr-diff/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/arr-diff/node_modules/arr-flatten/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/array-unique/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/is-number/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/isobject/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/isobject/node_modules/isarray/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/isobject/node_modules/isarray/test.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/randomatic/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/repeat-string/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/preserve/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/preserve/test.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/repeat-element/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/expand-brackets/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/expand-brackets/node_modules/is-posix-bracket/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/extglob/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/filename-regex/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/is-extglob/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/kind-of/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/kind-of/node_modules/is-buffer/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/normalize-path/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/node_modules/for-own/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/node_modules/for-own/node_modules/for-in/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/node_modules/is-extendable/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/parse-glob/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/parse-glob/node_modules/glob-base/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/parse-glob/node_modules/is-dotfile/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/regex-cache/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/regex-cache/node_modules/is-equal-shallow/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/regex-cache/node_modules/is-primitive/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/async-each/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/glob-parent/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/glob-parent/test.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/inherits/inherits.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/inherits/inherits_browser.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/inherits/test.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-binary-path/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-glob/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-glob/node_modules/is-extglob/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/path-is-absolute/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/examples/callback-api.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/examples/grep.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/examples/stream-api-pipe.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/examples/stream-api.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/fs.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/graceful-fs.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/legacy-streams.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/polyfills.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/minimatch.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/brace-expansion/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example/map.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/duplex.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/lib/_stream_duplex.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/lib/_stream_passthrough.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/lib/_stream_readable.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/lib/_stream_transform.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/lib/_stream_writable.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/lib/internal/streams/BufferList.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/buffer-shims/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/core-util-is/lib/util.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/core-util-is/test.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/isarray/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/isarray/test.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/process-nextick-args/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/process-nextick-args/test.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/string_decoder/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/util-deprecate/browser.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/util-deprecate/node.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/passthrough.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/readable.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/transform.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/writable.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/set-immediate-shim/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/readdirp.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/stream-api.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/co/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/lib/coerce.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/lib/help.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/lib/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/lib/parse-type.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/lib/util.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/deep-is/example/cmp.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/deep-is/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/fast-levenshtein/levenshtein.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/levn/lib/cast.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/levn/lib/coerce.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/levn/lib/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/levn/lib/parse-string.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/levn/lib/parse.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/prelude-ls/lib/Func.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/prelude-ls/lib/List.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/prelude-ls/lib/Num.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/prelude-ls/lib/Obj.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/prelude-ls/lib/Str.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/prelude-ls/lib/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/type-check/lib/check.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/type-check/lib/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/type-check/lib/parse-type.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/wordwrap/example/center.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/wordwrap/example/meat.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/wordwrap/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/dist/rollup.browser.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/dist/rollup.es.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/dist/rollup.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/amd-test/browser-source-map-support.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/amd-test/require.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/amd-test/script.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/browser-source-map-support.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/browser-test/script.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/build.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/header-test/script.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/header-test/server.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/Makefile.dryice.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/build/assert-shim.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/build/mini-require.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/build/suffix-browser.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/build/test-prefix.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/build/test-suffix.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/lib/source-map/array-set.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/lib/source-map/base64-vlq.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/lib/source-map/base64.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/lib/source-map/binary-search.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/lib/source-map/source-map-consumer.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/lib/source-map/source-map-generator.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/lib/source-map/source-node.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/lib/source-map/util.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/lib/source-map.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/node_modules/amdefine/amdefine.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/node_modules/amdefine/intercept.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/register.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/source-map-support.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/test.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/global.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/make.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/common.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/glob.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/fs.realpath/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/fs.realpath/old.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/inflight/inflight.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/inherits/inherits.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/inherits/inherits_browser.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/inherits/test.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/minimatch.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example/map.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/once/once.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/path-is-absolute/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/sync.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/interpret/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/lib/extension.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/lib/normalize.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/lib/register.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/node_modules/resolve/example/async.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/node_modules/resolve/example/sync.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/node_modules/resolve/index.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/node_modules/resolve/lib/async.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/node_modules/resolve/lib/caller.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/node_modules/resolve/lib/core.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/node_modules/resolve/lib/node-modules-paths.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/node_modules/resolve/lib/sync.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/plugin.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/scripts/generate-docs.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/scripts/run-tests.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/shell.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/cat.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/cd.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/chmod.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/common.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/cp.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/dirs.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/echo.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/error.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/exec.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/find.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/grep.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/head.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/ln.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/ls.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/mkdir.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/mv.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/popd.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/pushd.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/pwd.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/rm.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/sed.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/set.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/sort.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/tail.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/tempdir.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/test.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/to.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/toEnd.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/touch.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/uniq.js",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src/which.js",
+        "node_modules/riot/node_modules/riot-compiler/dist/es6.compiler.js",
+        "node_modules/riot/node_modules/riot-compiler/dist/riot.compiler.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/brackets.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/compiler.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/parsers/_utils.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/parsers/babel.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/parsers/coffee.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/parsers/es6.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/parsers/jade.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/parsers/less.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/parsers/livescript.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/parsers/pug.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/parsers/sass.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/parsers/scss.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/parsers/stylus.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/parsers/typescript.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/parsers.js",
+        "node_modules/riot/node_modules/riot-compiler/lib/safe-regex.js",
+        "node_modules/riot/node_modules/riot-compiler/src/_es6.js",
+        "node_modules/riot/node_modules/riot-compiler/src/_riot.js",
+        "node_modules/riot/node_modules/riot-compiler/src/core.js",
+        "node_modules/riot/node_modules/riot-compiler/src/parsers_br.js",
+        "node_modules/riot/node_modules/riot-compiler/src/safe-regex.js",
+        "node_modules/riot/node_modules/riot-observable/dist/es6.observable.js",
+        "node_modules/riot/node_modules/riot-observable/dist/observable.js",
+        "node_modules/riot/node_modules/riot-observable/dist/riot.observable.js",
+        "node_modules/riot/node_modules/riot-observable/lib/index.js",
+        "node_modules/riot/node_modules/riot-route/dist/amd.route.js",
+        "node_modules/riot/node_modules/riot-route/dist/amd.route.min.js",
+        "node_modules/riot/node_modules/riot-route/dist/es6.route.js",
+        "node_modules/riot/node_modules/riot-route/dist/riot.route.js",
+        "node_modules/riot/node_modules/riot-route/dist/route.js",
+        "node_modules/riot/node_modules/riot-route/dist/route.min.js",
+        "node_modules/riot/node_modules/riot-route/lib/index.js",
+        "node_modules/riot/node_modules/riot-tmpl/dist/csp.tmpl.js",
+        "node_modules/riot/node_modules/riot-tmpl/dist/es6.tmpl.js",
+        "node_modules/riot/node_modules/riot-tmpl/dist/riot.tmpl.js",
+        "node_modules/riot/node_modules/riot-tmpl/dist/tmpl.js",
+        "node_modules/riot/node_modules/riot-tmpl/src/brackets.js",
+        "node_modules/riot/node_modules/riot-tmpl/src/index.js",
+        "node_modules/riot/node_modules/riot-tmpl/src/notevil/helpers.js",
+        "node_modules/riot/node_modules/riot-tmpl/src/notevil/index.js",
+        "node_modules/riot/node_modules/riot-tmpl/src/notevil/lib/infinite-checker.js",
+        "node_modules/riot/node_modules/riot-tmpl/src/notevil/lib/primitives.js",
+        "node_modules/riot/node_modules/riot-tmpl/src/tmpl.js",
+        "node_modules/riot/node_modules/simple-dom/bin/build.js",
+        "node_modules/riot/node_modules/simple-dom/dist/simple-dom-test.js",
+        "node_modules/riot/node_modules/simple-dom/dist/simple-dom.js",
+        "node_modules/riot/node_modules/simple-dom/lib/simple-dom/document/comment.js",
+        "node_modules/riot/node_modules/simple-dom/lib/simple-dom/document/document-fragment.js",
+        "node_modules/riot/node_modules/simple-dom/lib/simple-dom/document/element.js",
+        "node_modules/riot/node_modules/simple-dom/lib/simple-dom/document/node.js",
+        "node_modules/riot/node_modules/simple-dom/lib/simple-dom/document/raw-html-section.js",
+        "node_modules/riot/node_modules/simple-dom/lib/simple-dom/document/text.js",
+        "node_modules/riot/node_modules/simple-dom/lib/simple-dom/document.js",
+        "node_modules/riot/node_modules/simple-dom/lib/simple-dom/html-parser.js",
+        "node_modules/riot/node_modules/simple-dom/lib/simple-dom/html-serializer.js",
+        "node_modules/riot/node_modules/simple-dom/lib/simple-dom/void-map.js",
+        "node_modules/riot/node_modules/simple-dom/lib/simple-dom.js",
+        "node_modules/riot/node_modules/simple-html-tokenizer/dist/simple-html-tokenizer.js",
+        "node_modules/riot/node_modules/simple-html-tokenizer/lib/simple-html-tokenizer/entity-parser.js",
+        "node_modules/riot/node_modules/simple-html-tokenizer/lib/simple-html-tokenizer/evented-tokenizer.js",
+        "node_modules/riot/node_modules/simple-html-tokenizer/lib/simple-html-tokenizer/html5-named-char-refs.js",
+        "node_modules/riot/node_modules/simple-html-tokenizer/lib/simple-html-tokenizer/index.js",
+        "node_modules/riot/node_modules/simple-html-tokenizer/lib/simple-html-tokenizer/tokenize.js",
+        "node_modules/riot/node_modules/simple-html-tokenizer/lib/simple-html-tokenizer/tokenizer.js",
+        "node_modules/riot/node_modules/simple-html-tokenizer/lib/simple-html-tokenizer/utils.js",
+        "node_modules/riot/riot+compiler.js",
+        "node_modules/riot/riot+compiler.min.js",
+        "node_modules/riot/riot.csp.js",
+        "node_modules/riot/riot.csp.min.js",
+        "node_modules/riot/riot.js",
+        "node_modules/riot/riot.min.js"
+      ],
+      ".json": [
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/ansi-styles/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/escape-string-regexp/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/has-ansi/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/strip-ansi/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/supports-color/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chalk/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/arrify/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/arr-diff/node_modules/arr-flatten/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/arr-diff/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/array-unique/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/is-number/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/isobject/node_modules/isarray/component.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/isobject/node_modules/isarray/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/isobject/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/randomatic/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/repeat-string/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/preserve/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/repeat-element/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/expand-brackets/node_modules/is-posix-bracket/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/expand-brackets/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/extglob/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/filename-regex/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/is-extglob/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/kind-of/node_modules/is-buffer/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/kind-of/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/normalize-path/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/node_modules/for-own/node_modules/for-in/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/node_modules/for-own/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/node_modules/is-extendable/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/parse-glob/node_modules/glob-base/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/parse-glob/node_modules/is-dotfile/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/parse-glob/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/regex-cache/node_modules/is-equal-shallow/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/regex-cache/node_modules/is-primitive/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/regex-cache/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/async-each/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/glob-parent/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/inherits/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-binary-path/node_modules/binary-extensions/binary-extensions.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-binary-path/node_modules/binary-extensions/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-binary-path/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-glob/node_modules/is-extglob/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-glob/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/path-is-absolute/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/examples/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/brace-expansion/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/buffer-shims/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/core-util-is/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/isarray/component.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/isarray/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/process-nextick-args/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/string_decoder/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/node_modules/util-deprecate/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/set-immediate-shim/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/co/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/deep-is/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/fast-levenshtein/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/levn/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/prelude-ls/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/type-check/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/wordwrap/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/optionator/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/node_modules/amdefine/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/.eslintrc.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/fs.realpath/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/inflight/node_modules/wrappy/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/inflight/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/inherits/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/once/node_modules/wrappy/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/once/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/path-is-absolute/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/interpret/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/node_modules/resolve/lib/core.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/node_modules/resolve/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/package.json",
+        "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/package.json",
+        "node_modules/riot/node_modules/riot-cli/package.json",
+        "node_modules/riot/node_modules/riot-compiler/package.json",
+        "node_modules/riot/node_modules/riot-observable/bower.json",
+        "node_modules/riot/node_modules/riot-observable/package.json",
+        "node_modules/riot/node_modules/riot-route/bower.json",
+        "node_modules/riot/node_modules/riot-route/package.json",
+        "node_modules/riot/node_modules/riot-tmpl/package.json",
+        "node_modules/riot/node_modules/simple-dom/package.json",
+        "node_modules/riot/node_modules/simple-html-tokenizer/package.json",
+        "node_modules/riot/package.json",
+        "package.json"
+      ],
+      ".coffee": [
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/amd-test/script.coffee",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/browser-test/script.coffee",
+        "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/header-test/script.coffee"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          ""
+        ],
+        "dependencies": {
+          "riot": "^2.3.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/lib/browser/compiler",
+          "node_modules/riot/lib/browser",
+          "node_modules/riot/lib/browser/tag",
+          "node_modules/riot/lib/browser/wrap",
+          "node_modules/riot/lib",
+          "node_modules/riot/lib/server",
+          "node_modules/riot"
+        ],
+        "dependencies": {
+          "riot-cli": "^2.6.1",
+          "riot-compiler": "^2.5.3",
+          "riot-observable": "^2.5.0",
+          "riot-route": "^2.5.0",
+          "riot-tmpl": "^2.4.1",
+          "simple-dom": "0.3.0",
+          "simple-html-tokenizer": "^0.2.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/lib",
+          "node_modules/riot/node_modules/riot-cli/lib/analyzer",
+          "node_modules/riot/node_modules/riot-cli/lib/tasks",
+          "node_modules/riot/node_modules/riot-cli",
+          "node_modules/riot/node_modules/riot-cli/test/expected/config-file",
+          "node_modules/riot/node_modules/riot-cli/test/expected/exclude",
+          "node_modules/riot/node_modules/riot-cli/test/expected/export",
+          "node_modules/riot/node_modules/riot-cli/test/fixtures",
+          "node_modules/riot/node_modules/riot-cli/test",
+          "node_modules/riot/node_modules/riot-cli/test/specs"
+        ],
+        "dependencies": {
+          "chalk": "^1.1.3",
+          "chokidar": "^1.5.2",
+          "co": "^4.6.0",
+          "optionator": "^0.8.1",
+          "riot-compiler": "^2.5.2",
+          "rollup": "^0.32.0",
+          "shelljs": "^0.7.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chalk"
+        ],
+        "dependencies": {
+          "ansi-styles": "^2.2.1",
+          "escape-string-regexp": "^1.0.2",
+          "has-ansi": "^2.0.0",
+          "strip-ansi": "^3.0.0",
+          "supports-color": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/has-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chalk/node_modules/strip-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar",
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/lib"
+        ],
+        "dependencies": {
+          "anymatch": "^1.3.0",
+          "async-each": "^1.0.0",
+          "glob-parent": "^2.0.0",
+          "inherits": "^2.0.1",
+          "is-binary-path": "^1.0.0",
+          "is-glob": "^2.0.0",
+          "path-is-absolute": "^1.0.0",
+          "readdirp": "^2.0.0",
+          "fsevents": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch"
+        ],
+        "dependencies": {
+          "arrify": "^1.0.0",
+          "micromatch": "^2.1.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch",
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/lib"
+        ],
+        "dependencies": {
+          "arr-diff": "^2.0.0",
+          "array-unique": "^0.2.1",
+          "braces": "^1.8.2",
+          "expand-brackets": "^0.1.4",
+          "extglob": "^0.3.1",
+          "filename-regex": "^2.0.0",
+          "is-extglob": "^1.0.0",
+          "is-glob": "^2.0.1",
+          "kind-of": "^3.0.2",
+          "normalize-path": "^2.0.1",
+          "object.omit": "^2.0.0",
+          "parse-glob": "^3.0.4",
+          "regex-cache": "^0.4.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/arr-diff"
+        ],
+        "dependencies": {
+          "arr-flatten": "^1.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces"
+        ],
+        "dependencies": {
+          "expand-range": "^1.8.1",
+          "preserve": "^0.2.0",
+          "repeat-element": "^1.1.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range"
+        ],
+        "dependencies": {
+          "fill-range": "^2.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range"
+        ],
+        "dependencies": {
+          "is-number": "^2.1.0",
+          "isobject": "^2.0.0",
+          "randomatic": "^1.1.3",
+          "repeat-element": "^1.1.2",
+          "repeat-string": "^1.5.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/is-number"
+        ],
+        "dependencies": {
+          "kind-of": "^3.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/isobject"
+        ],
+        "dependencies": {
+          "isarray": "1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/randomatic"
+        ],
+        "dependencies": {
+          "is-number": "^2.0.2",
+          "kind-of": "^3.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/expand-brackets"
+        ],
+        "dependencies": {
+          "is-posix-bracket": "^0.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/extglob"
+        ],
+        "dependencies": {
+          "is-extglob": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/kind-of"
+        ],
+        "dependencies": {
+          "is-buffer": "^1.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit"
+        ],
+        "dependencies": {
+          "for-own": "^0.1.3",
+          "is-extendable": "^0.1.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/node_modules/for-own"
+        ],
+        "dependencies": {
+          "for-in": "^0.1.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/parse-glob"
+        ],
+        "dependencies": {
+          "glob-base": "^0.3.0",
+          "is-dotfile": "^1.0.0",
+          "is-extglob": "^1.0.0",
+          "is-glob": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/parse-glob/node_modules/glob-base"
+        ],
+        "dependencies": {
+          "glob-parent": "^2.0.0",
+          "is-glob": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/regex-cache"
+        ],
+        "dependencies": {
+          "is-equal-shallow": "^0.1.3",
+          "is-primitive": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/regex-cache/node_modules/is-equal-shallow"
+        ],
+        "dependencies": {
+          "is-primitive": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/glob-parent"
+        ],
+        "dependencies": {
+          "is-glob": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-binary-path"
+        ],
+        "dependencies": {
+          "binary-extensions": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/is-glob"
+        ],
+        "dependencies": {
+          "is-extglob": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/examples",
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp",
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/test"
+        ],
+        "dependencies": {
+          "graceful-fs": "^4.1.2",
+          "minimatch": "^3.0.2",
+          "readable-stream": "^2.0.2",
+          "set-immediate-shim": "^1.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch"
+        ],
+        "dependencies": {
+          "brace-expansion": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/brace-expansion"
+        ],
+        "dependencies": {
+          "balanced-match": "^0.4.1",
+          "concat-map": "0.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream",
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/lib",
+          "node_modules/riot/node_modules/riot-cli/node_modules/chokidar/node_modules/readdirp/node_modules/readable-stream/lib/internal/streams"
+        ],
+        "dependencies": {
+          "buffer-shims": "^1.0.0",
+          "core-util-is": "~1.0.0",
+          "inherits": "~2.0.1",
+          "isarray": "~1.0.0",
+          "process-nextick-args": "~1.0.6",
+          "string_decoder": "~0.10.x",
+          "util-deprecate": "~1.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/optionator/lib",
+          "node_modules/riot/node_modules/riot-cli/node_modules/optionator"
+        ],
+        "dependencies": {
+          "prelude-ls": "~1.1.2",
+          "deep-is": "~0.1.3",
+          "wordwrap": "~1.0.0",
+          "type-check": "~0.3.2",
+          "levn": "~0.3.0",
+          "fast-levenshtein": "^1.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/levn/lib",
+          "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/levn"
+        ],
+        "dependencies": {
+          "prelude-ls": "~1.1.2",
+          "type-check": "~0.3.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/type-check/lib",
+          "node_modules/riot/node_modules/riot-cli/node_modules/optionator/node_modules/type-check"
+        ],
+        "dependencies": {
+          "prelude-ls": "~1.1.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/rollup/dist",
+          "node_modules/riot/node_modules/riot-cli/node_modules/rollup"
+        ],
+        "dependencies": {
+          "source-map-support": "^0.4.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/amd-test",
+          "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support",
+          "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/browser-test",
+          "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/header-test"
+        ],
+        "dependencies": {
+          "source-map": "0.1.32"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map",
+          "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/build",
+          "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/lib/source-map",
+          "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/lib",
+          "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/test",
+          "node_modules/riot/node_modules/riot-cli/node_modules/rollup/node_modules/source-map-support/node_modules/source-map/test/source-map"
+        ],
+        "dependencies": {
+          "amdefine": ">=0.0.4"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/shelljs",
+          "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/scripts",
+          "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/src"
+        ],
+        "dependencies": {
+          "glob": "^7.0.0",
+          "interpret": "^1.0.0",
+          "rechoir": "^0.6.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob"
+        ],
+        "dependencies": {
+          "fs.realpath": "^1.0.0",
+          "inflight": "^1.0.4",
+          "inherits": "2",
+          "minimatch": "^3.0.2",
+          "once": "^1.3.0",
+          "path-is-absolute": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/inflight"
+        ],
+        "dependencies": {
+          "once": "^1.3.0",
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch"
+        ],
+        "dependencies": {
+          "brace-expansion": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion"
+        ],
+        "dependencies": {
+          "balanced-match": "^0.4.1",
+          "concat-map": "0.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/glob/node_modules/once"
+        ],
+        "dependencies": {
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir",
+          "node_modules/riot/node_modules/riot-cli/node_modules/shelljs/node_modules/rechoir/lib"
+        ],
+        "dependencies": {
+          "resolve": "^1.1.6"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/riot/node_modules/riot-route",
+          "node_modules/riot/node_modules/riot-route/dist",
+          "node_modules/riot/node_modules/riot-route/lib",
+          "node_modules/riot/node_modules/riot-route/test/browserify",
+          "node_modules/riot/node_modules/riot-route/test",
+          "node_modules/riot/node_modules/riot-route/test/requirejs",
+          "node_modules/riot/node_modules/riot-route/test/specs"
+        ],
+        "dependencies": {
+          "riot-observable": "^2.5.0"
+        }
+      }
+    ]
+  }
+}

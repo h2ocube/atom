@@ -1,3 +1,19 @@
+## 1.7.1
+- Update sass-lint version to 1.9.1 to force fix AST issues included with sass-lint
+- Updated other third party packages
+
+## 1.7.0
+- Package start up time improvements thanks to [@ypresto](https://github.com/ypresto)
+- Update third party packages
+- Updated CI configurations thanks [@Arcanemagus](https://github.com/Arcanemagus)
+
+## 1.6.1
+- Force update to sass-lint 1.8.0 due to the high number of fixes and also AST fixes
+
+## 1.6.0
+- Adds `resolvePathsRelativeToConfig` to the config options to allow paths to be resolved relative to your config file rather than project root. Thanks to [@DirtyHairy](https://github.com/DirtyHairy)
+- The usual third party package updates
+
 ## 1.5.0
 - Allows the inclusion of files with extra extensions such as 'file.scss.liquid'
 - Updated to Atom linter ^5.0.1

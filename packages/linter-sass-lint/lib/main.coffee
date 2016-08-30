@@ -9,6 +9,11 @@ module.exports =
       type: 'boolean'
       description: 'and a .sass-lint.yml file is not specified in the .sass-lint.yml Path option'
       default: false
+    resolvePathsRelativeToConfig:
+      title: 'Resolve paths in configuration relative to config file'
+      type: 'boolean'
+      description: 'Instead of the default where paths are resolved relative to the project root'
+      default: 'false'
     configFile:
       title: '.sass-lint.yml Config File'
       description: 'A .sass-lint.yml file to use/fallback to if no config file is found in the current project root'
@@ -27,7 +32,7 @@ module.exports =
       default: false
 
   activate: ->
-    require('atom-package-deps').install()
+    require('atom-package-deps').install('linter-sass-lint')
     @subs = new CompositeDisposable
     @subs.add atom.config.observe 'linter-sass-lint.noConfigDisable',
       (noConfigDisable) =>
@@ -41,6 +46,9 @@ module.exports =
     @subs.add atom.config.observe 'linter-sass-lint.globalNodePath',
       (globalNodePath) =>
         @globalPath = globalNodePath
+    @subs.add atom.config.observe 'linter-sass-lint.resolvePathsRelativeToConfig',
+      (resolvePathsRelativeToConfig) =>
+        @resolvePathsRelativeToConfig = resolvePathsRelativeToConfig
 
   deactivate: ->
     @subs.dispose()
@@ -48,8 +56,12 @@ module.exports =
   # return a relative path for a file within our project
   # we use this to match it to our include/exclude glob string within sass-lint's
   # user specified config
-  getFilePath: (path) ->
-    relative = atom.project.relativizePath(path)
+  getFilePath: (absolutePath, configFilePath) ->
+    path = require('path')
+    if @resolvePathsRelativeToConfig
+      return path.relative(path.dirname(configFilePath), absolutePath)
+    else
+      return atom.project.relativizePath(absolutePath)[1]
 
   # Determines whether to use the sass-lint package included with linter-sass-lint
   # or the users globally installed sass-lint version
@@ -73,16 +85,15 @@ module.exports =
     return require path.join(@globalPath or prefixPath, 'lib', 'node_modules', 'sass-lint')
 
   provideLinter: ->
-    {find} = require 'atom-linter'
-    globule = require 'globule'
-    helpers = require './helpers'
-
     provider =
       name: 'sass-lint'
       grammarScopes: ['source.css.scss', 'source.scss', 'source.css.sass', 'source.sass']
       scope: 'file'
       lintOnFly: true
       lint: (editor) =>
+        {find} = require 'atom-linter'
+        helpers = require './helpers'
+        globule = require 'globule'
         configExt = '.sass-lint.yml'
         filePath = editor.getPath()
         projectConfig = find filePath, configExt
@@ -131,7 +142,7 @@ module.exports =
 
         try
           compiledConfig = linter.getConfig({}, config)
-          relativePath = this.getFilePath(filePath)[1]
+          relativePath = this.getFilePath(filePath, config)
 
           if globule.isMatch(compiledConfig.files.include, relativePath) and not globule.isMatch(compiledConfig.files.ignore, relativePath)
             result = linter.lintText({

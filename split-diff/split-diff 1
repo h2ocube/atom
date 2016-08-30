@@ -1,0 +1,22 @@
+subscribe_model :order_product_morphy, :after_save do
+  if status_changed?
+    self.recharge ||= create_recharge user_id: user_id, payable: self, price: price
+    case process_type
+    when OrderProcessType::PRODUCT_MORPHY
+      case status
+      when OrderProductMorphyStatus::WAITING_FOR_REVIEW
+        (product.product_manager_ids + orderable.product_manager_ids).uniq.each do |uid|
+          Notification.create user_id: uid, key: 'order_product_morphy.waiting_for_review', notifiable: self
+        end
+      when OrderProductMorphyStatus::CANCELED
+        refund! if recharge.paid?
+      when OrderProductMorphyStatus::ACCEPTED
+        user.add_role! :morphy
+        Notification.create key: 'order_product_morphy.accepted', notifiable: self
+      when OrderProductMorphyStatus::REJECTED
+        refund!
+        Notification.create key: 'order_product_morphy.rejected', notifiable: self
+      end
+    end
+  end
+end

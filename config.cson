@@ -26,10 +26,22 @@
     userId: "63600cb2-3bd3-6a28-9da5-f81ae28a578d"
   linter:
     showErrorPanel: false
+  "linter-jshint":
+    lintInlineJavaScript: true
   "linter-rubocop": {}
   "merge-conflicts": {}
   "rails-rspec": {}
   rspec:
     command: "bundle exec rspec"
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  "tree-view": {}
   welcome:
     showOnStartup: false
+".html.text.vue":
+  editor:
+    softWrapHangingIndent: 2
