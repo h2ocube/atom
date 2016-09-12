@@ -1,6 +1,0 @@
-'atom-workspace':
-  'ctrl-alt-o': 'api-workbench:go-to-definition'
-  'ctrl-g': 'api-workbench:find-usages'
-  'ctrl-alt-e':'api-workbench:quick-fix'
-  'ctrl-o':'api-workbench:quick-outline'
-  'ctrl-q':'api-workbench:quick-commands'

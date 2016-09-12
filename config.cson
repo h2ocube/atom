@@ -16,6 +16,18 @@
       "about"
       "background-tips"
     ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "doc/*"
+      "gulpfile.js/doc/*"
+      ".yardoc/*"
+    ]
+    openEmptyEditorOnStart: false
   editor:
     invisibles: {}
     scrollPastEnd: true
@@ -39,7 +51,8 @@
     leftEditorColor: "red"
     rightEditorColor: "green"
     syncHorizontalScroll: true
-  "tree-view": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
 ".html.text.vue":
