@@ -1,34 +1,59 @@
 {
-  "name": "language-vue",
-  "version": "0.16.0",
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
+        "spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/apm-install-dir-116819-5254-1ujert"
+    ]
+  ],
+  "_from": "../d-116819-5254-qc321l/package.tgz",
+  "_id": "language-vue@0.17.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/language-vue",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
+    "spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-116819-5254-qc321l/package.tgz",
+  "_shasum": "6cf4b7e7eb08cd0e965d61e9e498696e537017d7",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
+  "_where": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/apm-install-dir-116819-5254-1ujert",
+  "bugs": {
+    "url": "https://github.com/hedefalk/atom-vue/issues"
+  },
+  "dependencies": {},
   "description": "Vue component support in Atom",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "homepage": "https://github.com/hedefalk/atom-vue#readme",
+  "license": "MIT",
+  "name": "language-vue",
+  "optionalDependencies": {},
+  "readme": "# Vue component support in Atom\n\nAdds syntax highlighting and snippets to Vue component files in Atom.\n\nOriginally [converted](http://flight-manual.atom.io/hacking-atom/sections/converting-from-textmate/) from [vuejs/vue-syntax-highlight](https://github.com/vuejs/vue-syntax-highlight/tree/479672799b4162996e3c3c7e09583fb6d98e1e6c).\n\n## Working with SCSS/Sass\n\nSince vue-loader redirects `language=x` to loader `style!css!x` and sass-loader is using **SCSS** as default, you need to remap them in *webpack.config.js*:\n\n```\nvue: {\n  loaders: {\n    sass: 'style!css!sass?indentedSyntax',\n    scss: 'style!css!sass'\n  }\n}\n```\n\nThis is so that this package can support both old Sass and new SCSS. Refer to [hedefalk/atom-vue#5](https://github.com/hedefalk/atom-vue/issues/5) and [the official solution](https://github.com/vuejs-templates/webpack/blob/45c5ee5531a6f649c21aa2ec05472fb459247927/template/build/utils.js#L37-L38) for more info.\n",
+  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hedefalk/atom-vue.git"
   },
-  "license": "MIT",
-  "engines": {
-    "atom": ">=0.174.0 <2.0.0"
-  },
-  "dependencies": {},
-  "readme": "# Vue component support in Atom\n\nAdds syntax highlighting and snippets to Vue component files in Atom.\n\nOriginally [converted](http://flight-manual.atom.io/hacking-atom/sections/converting-from-textmate/) from [vuejs/vue-syntax-highlight](https://github.com/vuejs/vue-syntax-highlight/tree/479672799b4162996e3c3c7e09583fb6d98e1e6c).\n\n## Working with SCSS/Sass\n\nSince vue-loader redirects `language=x` to loader `style!css!x` and sass-loader is using **SCSS** as default, you need to remap them in *webpack.config.js*:\n\n```\nvue: {\n  loaders: {\n    sass: 'style!css!sass?indentedSyntax',\n    scss: 'style!css!sass'\n  }\n}\n```\n\nThis is so that this package can support both old Sass and new SCSS. Refer to [hedefalk/atom-vue#5](https://github.com/hedefalk/atom-vue/issues/5) and [the official solution](https://github.com/vuejs-templates/webpack/blob/45c5ee5531a6f649c21aa2ec05472fb459247927/template/build/utils.js#L37-L38) for more info.\n",
-  "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/hedefalk/atom-vue/issues"
-  },
-  "homepage": "https://github.com/hedefalk/atom-vue#readme",
-  "_id": "language-vue@0.16.0",
-  "_shasum": "d2f40c747495095c91e41ea00c98f6792a857cbb",
-  "_resolved": "file:../d-116729-3744-1objia7/package.tgz",
-  "_from": "../d-116729-3744-1objia7/package.tgz",
-  "_atomModuleCache": {
-    "version": 1,
-    "dependencies": [],
-    "extensions": {
-      ".json": [
-        "package.json"
-      ]
-    },
-    "folders": []
-  }
+  "version": "0.17.0"
 }
