@@ -1,3 +1,69 @@
+### 2.49.3
+  - Fix #296 Closing backtick terminates styled-component css property.
+  - Fix #297 for...of and for...in loops with let|const|var property grammar parsing.
+  - Fix #291 Add support for autoindenting and terminating styled-component backtick.
+
+### 2.49.2
+  - Fix styled componenet nested wrappper function tags Fixes #294
+  - Fix handling unit types after interpolation closures. Fixes #295
+
+### 2.49.1
+  - Fix #290
+
+### 2.49.0 (Atom >=1.13)
+  - Add support for Atom 1.13
+
+### 2.48.5
+  - Fix #296 Closing backtick terminates styled-component css property.
+  - Fix #297 for...of and for...in loops with let|const|var property grammar parsing.
+  - Fix #291 Add support for autoindenting and terminating styled-component backtick.
+
+### 2.48.4
+  - Fix styled componenet nested wrappper function tags Fixes #294
+  - Fix handling unit types after interpolation closures. Fixes #295
+
+### 2.48.3
+  - Fix #290 styled components interpolation.
+
+### 2.48.2
+  - Add support for indentation of paren blocks inside JSX as well as allowing addition indents on some contraints.
+
+### 2.48.0 (Atom <=1.12)
+  - Cease package support.
+  - Remove auto indent option as default.
+  - Add indent/outdent for Atom jsx
+  - Add option to export type {name} from 'module'
+
+### 2.47.0
+  - Fix bad regression in arrow function detections that also impacted performance. [Fixes #281](https://github.com/gandm/language-babel/issues/281)
+  - Change default autoIndentJSX to be on. See [PR #283](https://github.com/gandm/language-babel/issues/283)
+
+### 2.46.0
+  - Minor grammar improvements/fixes. Issues #272, #273, #274, #275, #276, #277 and #278
+  - Change keyword shortcut commenting in styled-components to return empty string in interpolations.
+
+### 2.45.0
+  - Support [styled-components](https://github.com/styled-components/styled-components) with own grammar rather than hacked language-css.
+  - Allow const uppercase variables to start with _ chars.
+
+### 2.44.1
+  - Fix issues with arrow functions caused by lost commit in 2.44.0!
+
+### 2.44.0
+  - Add styled components support.
+  - Fix Issue [#260](https://github.com/gandm/language-babel/issues/260)
+  - Fix Issue [#261](https://github.com/gandm/language-babel/issues/261)
+
+### 2.43.0
+  - Add ability to use a RegExp as a tagged template grammar extension.
+
+### 2.42.3
+  - Grammar object literals inside some arrays were incorrectly parsed as braced bodies [Fixes #257](https://github.com/gandm/language-babel/issues/257)
+
+### 2.42.2
+  - Fix grammar divide operator starting on a new line being treated as a RegExp. [Fixes #255](https://github.com/gandm/language-babel/issues/255)
+  - Fix grammar nested object literals not being handled correctly. [Fixes #256](https://github.com/gandm/language-babel/issues/256)
+
 ### 2.42.0
   - Add support for embedding other grammars to highlight template literals. Please refer to [the README](https://github.com/gandm/language-babel#javascript-tagged-template-literal-grammar-extensions)
 

@@ -2,7 +2,7 @@
 fs = require 'fs-plus'
 path = require 'path'
 autoCompleteJSX = require './auto-complete-jsx'
-InsertNlJsx = require './insert-nl-jsx'
+InsertNl = require './insert-nl'
 stripJsonComments = require 'strip-json-comments'
 YAML = require 'js-yaml'
 
@@ -21,11 +21,13 @@ TERNARY_IF              = 10      # Ternary ?
 TERNARY_ELSE            = 11      # Ternary :
 JS_IF                   = 12      # JS IF
 JS_ELSE                 = 13      # JS ELSE
-SWITCH_BRACE_OPEN       = 14      # opening brace in swtich { }
-SWITCH_BRACE_CLOSE      = 15      # closing brace in swtich { }
+SWITCH_BRACE_OPEN       = 14      # opening brace in switch { }
+SWITCH_BRACE_CLOSE      = 15      # closing brace in switch { }
 SWITCH_CASE             = 16      # switch case statement
-SWITCH_DEFAULT          = 17      # switch defauklt statement
+SWITCH_DEFAULT          = 17      # switch default statement
 JS_RETURN               = 18      # JS return
+PAREN_OPEN              = 19      # paren open (
+PAREN_CLOSE             = 20      # paren close )
 
 # eslint property values
 TAGALIGNED    = 'tag-aligned'
@@ -36,10 +38,10 @@ PROPSALIGNED  = 'props-aligned'
 module.exports =
 class AutoIndent
   constructor: (@editor) ->
-    @insertNlJsx = new InsertNlJsx(@editor)
+    @InsertNl = new InsertNl(@editor)
     @autoJsx = atom.config.get('language-babel').autoIndentJSX
     # regex to search for tag open/close tag and close tag
-    @JSXREGEXP = /(<)([$_A-Za-z](?:[$_.:\-A-Za-z0-9])*)|(\/>)|(<\/)([$_A-Za-z](?:[$._:\-A-Za-z0-9])*)(>)|(>)|({)|(})|(\?)|(:)|(if)|(else)|(case)|(default)|(return)/g
+    @JSXREGEXP = /(<)([$_A-Za-z](?:[$_.:\-A-Za-z0-9])*)|(\/>)|(<\/)([$_A-Za-z](?:[$._:\-A-Za-z0-9])*)(>)|(>)|({)|(})|(\?)|(:)|(if)|(else)|(case)|(default)|(return)|(\()|(\))/g
     @mouseUp = true
     @multipleCursorTrigger = 1
     @disposables = new CompositeDisposable()
@@ -401,8 +403,8 @@ class AutoIndent
             if parentTokenIdx >=0 then tokenStack[parentTokenIdx].termsThisTagIdx = idxOfToken
             idxOfToken++
 
-          # Javascript brace Start { or switch brace start {
-          when BRACE_OPEN, SWITCH_BRACE_OPEN
+          # Javascript brace Start { or switch brace start { or paren (
+          when BRACE_OPEN, SWITCH_BRACE_OPEN, PAREN_OPEN
             tokenOnThisLine = true
             if isFirstTokenOfLine
               stackOfTokensStillOpen.push parentTokenIdx = stackOfTokensStillOpen.pop()
@@ -439,8 +441,8 @@ class AutoIndent
             stackOfTokensStillOpen.push idxOfToken
             idxOfToken++
 
-          # Javascript brace End } or switch brace end }
-          when BRACE_CLOSE, SWITCH_BRACE_CLOSE
+          # Javascript brace End } or switch brace end } or paren close )
+          when BRACE_CLOSE, SWITCH_BRACE_CLOSE, PAREN_CLOSE
 
             if token is SWITCH_BRACE_CLOSE
               stackOfTokensStillOpen.push parentTokenIdx = stackOfTokensStillOpen.pop()
@@ -541,12 +543,12 @@ class AutoIndent
         else @indentRow({row: row, blockIndent: token.firstCharIndentation, jsxIndent: 1 })
       when JSXBRACE_OPEN
         @indentRow({row: row, blockIndent: token.firstCharIndentation, jsxIndent: 1 })
-      when BRACE_OPEN, SWITCH_BRACE_OPEN
-        @indentRow({row: row, blockIndent: token.firstCharIndentation, jsxIndent: 1 })
+      when BRACE_OPEN, SWITCH_BRACE_OPEN, PAREN_OPEN
+        @indentRow({row: row, blockIndent: token.firstCharIndentation, jsxIndent: 1, allowAdditionalIndents: true })
       when JSXTAG_SELFCLOSE_END, JSXBRACE_CLOSE, JSXTAG_CLOSE_ATTRS
         @indentRow({row: row, blockIndent: tokenStack[token.parentTokenIdx].firstCharIndentation, jsxIndentProps: 1})
-      when BRACE_CLOSE, SWITCH_BRACE_CLOSE
-        @indentRow({row: row, blockIndent: tokenStack[token.parentTokenIdx].firstCharIndentation, jsxIndent: 1 })
+      when BRACE_CLOSE, SWITCH_BRACE_CLOSE, PAREN_CLOSE
+        @indentRow({row: row, blockIndent: tokenStack[token.parentTokenIdx].firstCharIndentation, jsxIndent: 1, allowAdditionalIndents: true })
       when SWITCH_CASE, SWITCH_DEFAULT
         @indentRow({row: row, blockIndent: token.firstCharIndentation, jsxIndent: 1 })
 
@@ -595,6 +597,16 @@ class AutoIndent
     else if match[16]?
       if 'keyword.control.flow.js' is scope
         return JS_RETURN
+    else if match[17]?
+      if 'meta.brace.round.js' is scope or
+       'meta.brace.round.graphql' is scope or
+       'meta.brace.round.directive.graphql' is scope
+          return PAREN_OPEN
+    else if match[18]?
+      if 'meta.brace.round.js' is scope or
+       'meta.brace.round.graphql' is scope or
+       'meta.brace.round.directive.graphql' is scope
+          return PAREN_CLOSE
     return NO_TOKEN
 
 

@@ -1,13 +1,13 @@
 (function() {
   var Cache, crypto, csVer, fs, ltVer, path;
 
-  fs = require("fs");
+  fs = require('fs');
 
-  path = require("path");
+  path = require('path');
 
-  crypto = require("crypto");
+  crypto = require('crypto');
 
-  ltVer = require("./../package.json").version;
+  ltVer = require('./../package.json').version;
 
   csVer = ((typeof window !== "undefined" && window !== null ? window.CoffeeScript : void 0) || require('coffee-script')).VERSION;
 

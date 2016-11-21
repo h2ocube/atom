@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116825-2708-1k524yo/package.tgz",
+        "raw": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-11698-1417-1ktldb8/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116825-2708-1k524yo/package.tgz",
-        "spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116825-2708-1k524yo/package.tgz",
+        "rawSpec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-11698-1417-1ktldb8/package.tgz",
+        "spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-11698-1417-1ktldb8/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/apm-install-dir-116825-2708-sw1yte"
+      "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/apm-install-dir-11698-1417-giamc5"
     ]
   ],
-  "_from": "../d-116825-2708-1k524yo/package.tgz",
-  "_id": "language-pug@0.0.18",
+  "_from": "../d-11698-1417-1ktldb8/package.tgz",
+  "_id": "language-pug@0.0.19",
   "_inCache": true,
   "_installable": true,
   "_location": "/language-pug",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116825-2708-1k524yo/package.tgz",
+    "raw": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-11698-1417-1ktldb8/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116825-2708-1k524yo/package.tgz",
-    "spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116825-2708-1k524yo/package.tgz",
+    "rawSpec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-11698-1417-1ktldb8/package.tgz",
+    "spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-11698-1417-1ktldb8/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-116825-2708-1k524yo/package.tgz",
-  "_shasum": "1a4fde19a0d2cc80fe7146535ba7ca501b6853ee",
+  "_resolved": "file:../d-11698-1417-1ktldb8/package.tgz",
+  "_shasum": "ba59c04d8f4b14a7af8a3f5ce696c36719aab01b",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116825-2708-1k524yo/package.tgz",
-  "_where": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/apm-install-dir-116825-2708-sw1yte",
+  "_spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-11698-1417-1ktldb8/package.tgz",
+  "_where": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/apm-install-dir-11698-1417-giamc5",
   "bugs": {
     "url": "https://github.com/genoma/language-pug/issues"
   },
@@ -60,5 +60,5 @@
     "type": "git",
     "url": "git+https://github.com/genoma/language-pug.git"
   },
-  "version": "0.0.18"
+  "version": "0.0.19"
 }

@@ -1,5 +1,7 @@
 # language-babel
 
+Please note that this package is no longer supported.
+
 [![Build Status](https://travis-ci.org/gandm/language-babel.svg?branch=master)](https://travis-ci.org/gandm/language-babel)
 [![Build status](https://ci.appveyor.com/api/projects/status/ef32qrj8iplnbqm2/branch/master?svg=true)](https://ci.appveyor.com/project/gandm/language-babel/branch/master)
 [![Build Dependencies](https://david-dm.org/gandm/language-babel.svg)](https://david-dm.org/gandm/language-babel)
@@ -8,13 +10,14 @@ Language grammar for all versions of JavaScript including  ES2016 and ESNext,  J
 
 The package also provides
 
- - [automatic indentation](https://github.com/gandm/language-babel#automatic-indenting-of-jsx) of JSX (optional).
+ - [automatic indentation](https://github.com/gandm/language-babel#automatic-indenting-of-jsx) of JSX.
  - [JSX tag closure and JSX html element completion suggestions](https://github.com/gandm/language-babel#auto-completion-of-jsx-tags-elements-and-attributes).
  - Context aware [commenting out of JSX elements](https://github.com/gandm/language-babel#commenting-out-jsx-elements).
  - Additional [newline insertion between JSX tag pairs](https://github.com/gandm/language-babel#automatic-insertion-between-jsx-tags).
  - Babel [transpilation on file saves](https://github.com/gandm/language-babel#interface-to-babel-v6--v5) (optional).
  - Babel transpile of all files in a directory or directories.
  - Babel transpiled [code preview](https://github.com/gandm/language-babel#interface-to-babel-v6--v5).
+ - Support for [styled-components](https://github.com/styled-components/styled-components) CSS inside tagged template strings.
  - Support for [GraphQL code highlighting](https://github.com/gandm/language-babel#graphql-code-highlighting)
  - [Support for adding other language grammars to highlight code inside template literal strings](https://github.com/gandm/language-babel#javascript-tagged-template-literal-grammar-extensions).
 
@@ -28,7 +31,7 @@ Install via ATOM or by using `apm install language-babel`. If you only need to u
 
 ## Auto Completion of JSX tags, elements and attributes
 
-JSX tag closures are provided as auto complete options. In addition common HTML elements and their associated properties are displayed as auto complete lists. Those supported by language-babel are described [here](http://facebook.github.io/react/docs/tags-and-attributes.html)
+JSX tag closures are provided as auto-complete options. In addition, common HTML elements and their associated properties are displayed as auto-complete lists. Those supported by language-babel are described [here](http://facebook.github.io/react/docs/tags-and-attributes.html)
 
 ![autoclose](https://cloud.githubusercontent.com/assets/2313237/12352348/218348b6-bb7d-11e5-9245-bd0d1467d71d.gif)
 
@@ -46,9 +49,9 @@ When a newline is inserted between a matched open/close pair of JSX tags, langua
 
 ## Automatic Indenting of JSX
 
-By default this feature is turned off in the package setting - `Auto Indent JSX`. If enabled, language-babel will auto-indent any JSX code typed or moved across using suitable Atom defaults. There are also three commands - `language-babel:toggle-auto-indent-jsx`, `language-babel:auto-indent-jsx-on` and `language-babel:auto-indent-jsx-off` that override the default behaviour. These can be mapped to a keyboard shortcuts if needed.
+The package setting `Auto Indent JSX` if enabled will auto-indent any JSX code typed or moved across using suitable Atom defaults. There are also three commands - `language-babel:toggle-auto-indent-jsx`, `language-babel:auto-indent-jsx-on` and `language-babel:auto-indent-jsx-off` that override the default behaviour. These can be mapped to keyboard shortcuts if needed.
 
-Auto Indenting will also attempt to read the `.eslintrc` file associated with an edited file's project for the presence of four properties whose defaults are shown below. These rules, which are part of the [ESLint-plugin-React](https://github.com/yannickcr/eslint-plugin-react) EsLint plugin, are then used to determine the alignment and tab/spaces spacing of JSX elements. For more information on the options for these rules see [Closing bracket](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md), [Indent](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md) and [Indent Props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md).
+Auto-Indenting will also attempt to read the `.eslintrc` file associated with an edited file's project for the presence of four properties whose defaults are shown below. These rules, which are part of the [ESLint-plugin-React](https://github.com/yannickcr/eslint-plugin-react) EsLint plugin, are then used to determine the alignment and tab/spaces spacing of JSX elements. For more information on the options for these rules see [Closing bracket](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md), [Indent](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md) and [Indent Props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md).
 
 Please note that no attempt is currently made to read eslint settings in any other file. e.g. `package.json`, `eslint.js`, `extends...`, etc.
 
@@ -90,7 +93,7 @@ Babel v5 and Babel v6 code can be previewed as shown bellow. Source mapping keep
 
 #### Transpiling
 
-This package works by using the concept of a project folder which we assume contains a project or even nested projects any of which may contain a Babel project.  In a Babel project we expect to see one or more `.babelrc` files,  `node_modules` folders at the root's of the project containing an optional `babel-core` (either v5 or v6)  and other babel plugins/presets as determined by the project's `package.json` file. In addition we may expect to see one or more `.languagebabel` files in the project. Projects are either implicit (an Atom project folder) or explicit (denoted by a `.languagebabel` property of `"projectRoot": true`). If no `babel-core` is found in the project then a version will be provided by the package but this will be a Babel Version 6 instance. Plugins and presets will not be provided by the package.
+This package works by using the concept of a project folder which we assume contains a project or even nested projects any of which may contain a Babel project.  In a Babel project, we expect to see one or more `.babelrc` files,  `node_modules` folders at the root's of the project containing an optional `babel-core` (either v5 or v6)  and other babel plugins/presets as determined by the project's `package.json` file. In addition, we may expect to see one or more `.languagebabel` files in the project. Projects are either implicit (an Atom project folder) or explicit (denoted by a `.languagebabel` property of `"projectRoot": true`). If no `babel-core` is found in the project then a version will be provided by the package but this will be a Babel Version 6 instance. Plugins and presets will not be provided by the package.
 
 A trivial example project that shows examples of using `.languagebabel` and `.babelrc` files may be found [here](https://github.com/gandm/example-language-babel).
 
@@ -98,7 +101,7 @@ A trivial example project that shows examples of using `.languagebabel` and `.ba
 
 Multiple projects may be open at any time inside Atom and `language-babel` must allow the use of differing `babel-core` versions and associated plugins when transpiling. It does this by using background tasks - one per Babel project. When a `language-babel` grammar enabled file is saved the package settings and optionally any `.languagebabel` configuration files are read to determine if the file should be transpiled and what to do with the output. These settings and `.languagebabel` options are described below.
 
-It is very easy to ensure that language-babel does not transpile files that are not needed. Just turn off the global package setting `Transpile On Save` and turn on `Allow Local Override`. Apart form grammar highlighting only projects having a `.languagebabel` in the file path will then be affected by this package. Further granularity is easy too.
+It is very easy to ensure that language-babel does not transpile files that are not needed. Just turn off the global package setting `Transpile On Save` and turn on `Allow Local Override`. Apart from grammar highlighting only projects having a `.languagebabel` in the file path will then be affected by this package. Further granularity is easy too.
 
 If `.babelrc` and/or `package.json` files contain Babel properties that are environment specific these environments should be created before Atom is started. In particular, Babel assumes a `development` environment by default, whereas Atom assumes a `production` environment by default.
 
@@ -117,10 +120,10 @@ atom
 
 ## Package Settings
 
-For most projects it is better to configure `language-babel` via project based `.languagebabel` file properties which will override the package settings below. See *".langeuagebabel Configuration"* for more information on this behaviour.
+For most projects, it is better to configure `language-babel` via project-based `.languagebabel` file properties which will override the package settings below. See *".langeuagebabel Configuration"* for more information on this behaviour.
 
 * #### Allow Local Override
-  If set this allows `.languagebabel` file properties to be override the global package settings.
+  If set this allows `.languagebabel` file properties to override the global package settings.
 
 * #### Transpile On Save
   On any file save of a `language-babel` grammar enabled file the Babel transpiler is called. No actual transpiled file is saved but any Babel errors and/or successful indicators are notified by an ATOM pop-up. Not all files are candidates for transpilation as other settings can affect this. For example see `Disable When No Babelrc File In Path` and `Babel Source Path` below.
@@ -190,7 +193,7 @@ For most projects it is better to configure `language-babel` via project based `
   ```
 
 * #### Babel Source Path, Babel Transpile Path and Babel Maps Path
-  These a directories based on the project root. A project root is either implicit ( baed on an Atom folders root directory) or explicit ( based upon the root defined in the nearest `.languagebabel` file with a property `"projectRoot": true` )
+  These a directories based on the project root. A project root is either implicit ( based on an Atom folders root directory) or explicit ( based upon the root defined in the nearest `.languagebabel` file with a property `"projectRoot": true` )
 
   Only files found under the `project/babelsourcepath` will be candidates for transpilation. If multiple project root folders exist then `babelsourcepath` may exist in any or all folders.
 
@@ -231,24 +234,26 @@ For most projects it is better to configure `language-babel` via project based `
   Enables automatic indenting of JSX.
 
 * #### JavaScript Tagged Template Literal Grammar Extensions
-  This package setting allows language-babel to embed third party grammars so as to highlight code inside template literal strings. These may actual tagged template literals as defined [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals), or where no function tag exists a comment string.
 
-  For example you may wish to highlight templates prefixed with ``/** @html */`<div></div>` `` as HTML, or maybe `` sql`select * from table foo` `` as SQL.
-  Firstly, you need to find a grammar that supports the highlighting of the template code. This language package should then be installed inside Atom. You then need to find the scope name for that grammar. This can be done in a number of ways, but if you look at the grammars JSON/CSON file and look for the `scopeName` property field, it is that which should be used.
+	This package setting allows language-babel to include third party grammars to highlight code inside template literal strings. These may be tagged template literals, [described here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals), or where no appropriate function tag exists, another form of tag marking that signifies the templates nature. e.g. A comment string.
 
-  If we use [language-html](https://atom.io/packages/language-html) and [language-sql](https://atom.io/packages/language-sql) for our example to highlight code, then this field would look like.
+  For example you may wish to highlight templates prefixed with ``/* @html */`<div></div>` `` as HTML, and  maybe `` sql`select * from table foo` `` as SQL. The latter assumes a tagged function named sql exists in the code.
 
-  ```/* @html */:text.basic.html, sql:source.sql```
+	In order to do this, you need to find a language package that supports the highlighting of the template code. This language package should then be installed into Atom. You then need to find the scope name for that grammar. This can be done in a number of ways, but if you view the grammars JSON/CSON file and look for the `scopeName` property field, this indicates the scope name for that grammar.
 
-  In other words, this field is an array of strings, with each string in the form of `template-prefix:grammar-scopename#optional-include`.
+	If we use the Atom provided languages [language-css](https://atom.io/packages/language-css), [language-html](https://atom.io/packages/language-html) and [language-sql](https://atom.io/packages/language-sql) in our example above to highlight the template code, then this field would look like.
+
+  ```"css\\.([a-z])+":source.css, /* @html */:text.html.basic, sql:source.sql```
+
+	In other words, the package settings for this field is an array of strings, with each string in the form of `template-prefix:grammar-scopename#optional-include`.
 
   where:
-    - `template-prefix` is a literal string that comes immediately before the opening back-tick of a template.
-    - `:` is a separator before the next field and is not part of the prefix.
+    - `template-prefix` is a literal string or an Oniguruma regular expression ( Oniguruma is the regular expression engine for TextMate grammars used by Atom) that comes before the opening back-tick of a template. It may contain any characters except a comma but including colons. A regular expression is denoted by being enclosed by double quote marks `"RegExp Here"`. Also, regular expressions must conform to being used inside a JSON object, so for example, `\s*`, which skips any number of white-space characters, should be entered as `\\s*`, whereas embedded double quotes must be escaped `\"`
+    - `:`The last colon in the string signifies the start of the embedded grammars scopeName.
     - `grammar-scopename` is the scopeName of the grammar used to highlight the template.
     - `#optional-include` if present, will use that include block in the grammars repository.
 
-  Please note: As language-babel passes off highlighting of the template to another grammar, it cannot highlight any interpolated code.
+  **Please note:** As language-babel passes off highlighting of the template to another grammar, it cannot highlight any interpolated code. Actually, that's not strictly correct, as it does highlight interpolated JavaScript code but only at the top most rule stack of the embedded grammar, but this is unlikely to be useful with most grammars. Also note that there is a delay of 10 seconds between the last character being entered into this field and a new extension grammar being generated.
 
 
 ## .languagebabel Configuration
@@ -281,22 +286,24 @@ language-babel supports highlighting of GraphQL code within JavaScript files. Fo
 
  Inside JavaScript, GraphQL enclosed in back-ticks, a.k.a. Quasi or template strings are highlighted. Other GraphQL structures, notably types, are supported by the Flow component of this package.
 
- Strings that have one of three prefixes/tags are parsed by the grammar to hightlight the code enclosed.
+ Strings that have one of three prefixes/tags are parsed by the grammar to highlight the code enclosed.
 
-```
-Relay.QL`This is how Relay.QL uses template strings`
-gql`This is how Apollo for GraphQL uses template strings`
-/* GraphQL */`For cases where no template tag function is available`
-```
+ ```
+ Relay.QL`This is how Relay.QL uses template strings`
 
-An example of using the third method for highlighting code using `/* GraphQL */`
+ gql`This is how Apollo for GraphQL uses template strings`
 
-```
-var { graphql, buildSchema } = require('graphql');
+ /* GraphQL */`For cases where no template tag function is available`
+ ```
 
-var schema = buildSchema(/* GraphQL */`
-  type Query {
-    hello: String
-  }
-`);
-```
+ An example of using the third method for highlighting code using `/* GraphQL */`
+
+ ```
+ var { graphql, buildSchema } = require('graphql');
+
+ var schema = buildSchema(/* GraphQL */`
+   type Query {
+     hello: String
+   }
+ `);
+ ```

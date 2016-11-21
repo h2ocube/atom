@@ -15,6 +15,7 @@
       "language-c"
       "about"
       "background-tips"
+      "autocomplete-ruby"
     ]
     ignoredNames: [
       ".git"
@@ -26,6 +27,8 @@
       "doc/*"
       "gulpfile.js/doc/*"
       ".yardoc/*"
+      "public/assets-tags/*"
+      "public/assets-plugins/*"
     ]
     openEmptyEditorOnStart: false
   editor:
@@ -41,10 +44,6 @@
   "linter-jshint":
     lintInlineJavaScript: true
   "linter-rubocop": {}
-  "merge-conflicts": {}
-  "rails-rspec": {}
-  rspec:
-    command: "bundle exec rspec"
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
@@ -52,7 +51,7 @@
     rightEditorColor: "green"
     syncHorizontalScroll: true
   "tree-view":
-    hideVcsIgnoredFiles: true
+    hideVcsIgnoredFiles: false
   welcome:
     showOnStartup: false
 ".html.text.vue":

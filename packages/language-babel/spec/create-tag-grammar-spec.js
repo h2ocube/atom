@@ -1,7 +1,5 @@
-var Range = require('atom').Range;
-var Point = require('atom').Point;
+/*global atom*/
 var temp = require('temp');
-var fs = require('fs-plus');
 var path = require('path');
 var CreateTtlGrammar = require('../lib/create-ttl-grammar');
 
@@ -24,7 +22,7 @@ describe('Create Ttl Grammar', () => {
 
   afterEach(() => {
     ttlGrammar.destroy();
-    delete ttlGrammar;
+    ttlGrammar = null;
   });
 
   describe('::getTtlConfig', () => {
@@ -79,7 +77,7 @@ describe('Create Ttl Grammar', () => {
         waitsForPromise(() => {
           return ttlGrammar.getGrammarFiles().then( (grammarFiles) => {
             expect(grammarFiles).toContain('Babel Language.json');
-          })
+          });
         });
       }
     );
@@ -92,19 +90,19 @@ describe('Create Ttl Grammar', () => {
         waitsForPromise(() => {
           return ttlGrammar.getTtlGrammarFiles().then( (grammarFiles) => {
             expect(grammarFiles).toMatch(/^ttl-/);
-          })
+          });
         });
       }
     );
   });
 
-  describe('::noGrammarFileExists', () => {
+  describe('::doesGrammarFileExist', () => {
     return it(
-      'checks if no grammar file exists',
+      'checks if a grammar file exists',
       () => {
         waitsForPromise(() => {
-          return ttlGrammar.noGrammarFileExists('Babel Language.json').catch( (rejVal) => {
-            expect(rejVal).toEqual({err: false, module: 'noGrammarFileExists'})
+          return ttlGrammar.doesGrammarFileExist('Babel Language.json').catch( (rejVal) => {
+            expect(rejVal).toEqual(true);
           });
         });
       }
@@ -116,9 +114,9 @@ describe('Create Ttl Grammar', () => {
     'should remove any files ttl-hashedvalue.json',
     () => {
       var tempGrammarDir = temp.mkdirSync();
-      var tempGrammarFile1 = temp.open('ttl-a.json');
-      var tempGrammarFile2 = temp.open('ttl-b.json');
-      var tempGrammarFile3 = temp.open('ttl-c.json');
+      temp.open('ttl-a.json');
+      temp.open('ttl-b.json');
+      temp.open('ttl-c.json');
 
       spyOn(ttlGrammar, 'getGrammarPath').andReturn(tempGrammarDir);
 
@@ -127,7 +125,7 @@ describe('Create Ttl Grammar', () => {
           // Previous fs.unlink's queue a delete in Node so delay check
           .then( () => setTimeout(()=>void(0) ,1000) )
           .then( () => ttlGrammar.getTtlGrammarFiles() )
-          .then( (ttlFiles) => expect(ttlFiles).toEqual([]) )
+          .then( (ttlFiles) => expect(ttlFiles).toEqual([]) );
         });
       }
     );
@@ -143,14 +141,14 @@ describe('Create Ttl Grammar', () => {
   });
 
   // Ensure we finish off by creating a valid ttl file
-  describe('::observeTtlConfig', () => {
+  describe('::createGrammar', () => {
     return it(
       'should create a valid ttl grammar file based upon some defined config',
       () => {
         var tempGrammarDir = temp.mkdirSync();
 
         spyOn(ttlGrammar, 'getGrammarPath').andReturn(tempGrammarDir);
-        spyOn(ttlGrammar, 'getTtlConfig').andReturn(['/* html */:text.html.basic','sql:source.sql']);
+        spyOn(ttlGrammar, 'getTtlConfig').andReturn(['"css\\\\.([abc])+":source.css','/* html */:text.html.basic','sql:source.sql']);
 
         const grammarText = ttlGrammar.createGrammarText();
         const hash = ttlGrammar.generateTtlSHA256(grammarText);
@@ -158,7 +156,7 @@ describe('Create Ttl Grammar', () => {
         const ttlFilenameAbsolute = ttlGrammar.makeTtlGrammarFilenameAbsoulute(ttlFilename);
         waitsForPromise(() => {
           return ttlGrammar.createGrammar({ttlFilename, ttlFilenameAbsolute, grammarText }).then( (val) => {
-            expect(val).toEqual('ttl-b6536e72fc27ff522b4a17c8bbbb178a5de193d8c3f5ec8aa772c7569eb28ecc.json');
+            expect(val).toEqual('ttl-d91bc48a20b15ec34bd92175c90020f40f0686008f2e3fefbd1bedc1fbe9079c.json');
           });
         });
       }

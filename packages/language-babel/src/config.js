@@ -90,7 +90,8 @@ module.exports = {
     default: [],
     items: {
       type: "string"
-    }
+    },
+    order: 150
   },
 
   autoIndentJSX: {

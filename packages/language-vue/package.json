@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
+        "raw": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-1161021-4141-1ew26yf/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
-        "spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
+        "rawSpec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-1161021-4141-1ew26yf/package.tgz",
+        "spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-1161021-4141-1ew26yf/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/apm-install-dir-116819-5254-1ujert"
+      "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/apm-install-dir-1161021-4141-19smygf"
     ]
   ],
-  "_from": "../d-116819-5254-qc321l/package.tgz",
-  "_id": "language-vue@0.17.0",
+  "_from": "../d-1161021-4141-1ew26yf/package.tgz",
+  "_id": "language-vue@0.21.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/language-vue",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
+    "raw": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-1161021-4141-1ew26yf/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
-    "spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
+    "rawSpec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-1161021-4141-1ew26yf/package.tgz",
+    "spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-1161021-4141-1ew26yf/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-116819-5254-qc321l/package.tgz",
-  "_shasum": "6cf4b7e7eb08cd0e965d61e9e498696e537017d7",
+  "_resolved": "file:../d-1161021-4141-1ew26yf/package.tgz",
+  "_shasum": "f09595469430144d5d858be3f7d56bb83514b703",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-116819-5254-qc321l/package.tgz",
-  "_where": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/apm-install-dir-116819-5254-1ujert",
+  "_spec": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/d-1161021-4141-1ew26yf/package.tgz",
+  "_where": "/private/var/folders/35/4xys11d16rj58lrxg02g95sm0000gn/T/apm-install-dir-1161021-4141-19smygf",
   "bugs": {
     "url": "https://github.com/hedefalk/atom-vue/issues"
   },
@@ -55,5 +55,5 @@
     "type": "git",
     "url": "git+https://github.com/hedefalk/atom-vue.git"
   },
-  "version": "0.17.0"
+  "version": "0.21.0"
 }

@@ -10,16 +10,17 @@
       var rulePath;
       try {
         rulePath = resolve(moduleName, {
-          basedir: process.cwd()
+          basedir: process.cwd(),
+          extensions: ['.js', '.coffee', '.litcoffee', '.coffee.md']
         });
         return require(rulePath);
-      } catch (undefined) {}
+      } catch (error) {}
       try {
         return require(moduleName);
-      } catch (undefined) {}
+      } catch (error) {}
       try {
         return require(path.resolve(process.cwd(), moduleName));
-      } catch (undefined) {}
+      } catch (error) {}
       return require(moduleName);
     },
     loadFromConfig: function(coffeelint, config) {
@@ -34,7 +35,7 @@
       return results;
     },
     loadRule: function(coffeelint, moduleName, ruleName) {
-      var e, error, i, len, results, rule, ruleModule;
+      var e, i, len, results, rule, ruleModule;
       if (ruleName == null) {
         ruleName = void 0;
       }
